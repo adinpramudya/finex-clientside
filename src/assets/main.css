@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'figtree';
+    src: url('../assets/font//Figtree-VariableFont_wght.ttf');
+  }
+}
+
+html {
+  font-family: 'figtree';
+}
+
+.swiper {
+  @apply w-full h-full;
+}
+
+.swiper-button-next {
+  color: black !important;
+  @apply bg-sunglow text-black rounded-full p-6;
+}
+.shadow-custom{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+}
+.swiper-button-prev {
+  color: black !important;
+  @apply bg-sunglow text-black rounded-full p-6;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  font-size: 14px !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 14px !important;
+}
+
+/* .thumbnails {
+  margin: auto;
+  max-width: 300px;
+}
+
+.thumbnails .vueperslide {
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  transition: 0.3s ease-in-out;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.thumbnails .vueperslide--active {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  border-color: #000;
+} */
+.vueperslide__content-wrapper:not(.vueperslide__content-wrapper--outside-top):not(.vueperslide__content-wrapper--outside-bottom) {
+  justify-content: end !important;
+  color: white;
+}
+
+@layer utilities {
+  .hamburger-line {
+    @apply my-1 block h-[6px] bg-black rounded-xl;
+  }
+
+  .hamburger-active>span:nth-child(1) {
+    @apply rotate-45;
+  }
+
+  .hamburger-active>span:nth-child(2) {
+    @apply scale-0;
+  }
+
+  .hamburger-active>span:nth-child(3) {
+    @apply -rotate-45;
+  }
+
+  .open-card {
+    @apply rotate-[360deg] transition-all duration-500;
+  }
+
+  .btn-hover {
+    @apply bg-woodsmkoke text-sunglow transition-all duration-500 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-sunglow text-slate-950 uppercase rounded-xl font-bold;
+  }
+
+  .btn-secondary {
+    @apply bg-textPrimary border-sunglow border-2 uppercase rounded-xl font-bold;
+  }
+
+  .btn-page-secondary {
+    @apply bg-pageColor text-slate-950 uppercase rounded-xl font-bold;
+  }
+
+  .btn-google-primary {
+    @apply bg-mahogany text-white uppercase rounded-xl font-bold flex items-center;
+
+    svg {
+      @apply fill-white;
+    }
+  }
+
+  .btn-google-secondary {
+    @apply bg-textPrimary text-slate-950 uppercase rounded-xl font-bold flex items-center border-2 border-mahogany;
+
+    svg {
+      @apply fill-black;
+    }
+  }
+
+  .btn-google-hover {
+    @apply bg-woodsmkoke text-sunglow transition-all ease-in-out duration-500;
+
+    svg {
+      @apply fill-sunglow;
+    }
+  }
+}

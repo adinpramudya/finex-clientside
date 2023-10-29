@@ -1,0 +1,164 @@
+[
+    {
+        "id": "1",
+        "name": "Emas",
+        "desc": "Emas adalah salah satu jenis logam mulia yang paling populer. Karakteristik emas itu mudah ditempa, elastis, warnanya kuning mengkilap, dan emas tidak mudah terkontaminasi zat kimia lain. Oleh sebab itu, emas sering menjadi bahan perhiasan seperti anting, kalung, cincin, gelang, dan perhiasan lainnya. Emas juga diperdagangkan di Bursa Berjangka berupa Kontrak Berjangka Emas yaitu kontrak dengan dasar emas batangan dengan kemurnian 99,99% yang dilengkapi dengan sertifikat ANTAM/LBMA. Kontrak ini memiliki jangka waktu transaksi paling lama tiga bulan dan pada saat jatuh tempo kontrak, serah terima fisik emas batangan dapat dilakukan sesuai dengan ketentuan yang berlaku. Semua kontrak berjangka emas dengan beberapa variannya diharapkan dapat memfasilitasi lebih banyak pelaku pasar baik untuk kegiatan Lindung Nilai maupun untuk tujuan investasi.",
+        "imgUrl": "/public/images/attachments/Gold.png",
+        "futuresContracts": [
+            {
+                "id": "1",
+                "code": "GOL",
+                "contractUnit": "1000",
+                "marginPerLotSpot": "7000000",
+                "marginPerLotRemote": "4500000",
+                "marginPerLotNone": "",
+                "commissionPerSideLot": "250000",
+                "tradingDaysAndHour": "09.30 - 17.30 WIB (Senin - Jumat) 17.45 - 18.00 WIB (Jam perdagangan setelah sesi penutupan dengan menggunakan harga Penyelesaian)",
+                "minimumPriceChange": "50",
+                "price": "Rupiah per gram (termasuk PPN)",
+                "contractMonth": "3 (tiga) bulan kontrak berturut-turut"
+            },
+            {
+                "id": "2",
+                "code": "GOL250",
+                "contractUnit": "250",
+                "marginPerLotSpot": "5000000",
+                "marginPerLotRemote": "2000000",
+                "marginPerLotNone": "",
+                "commissionPerSideLot": "150000",
+                "tradingDaysAndHour": "09.30 - 17.30 WIB (Senin - Jumat) 17.45 - 18.00 WIB (Jam perdagangan setelah sesi penutupan dengan menggunakan harga Penyelesaian)",
+                "minimumPriceChange": "50",
+                "price": "Rupiah per gram (termasuk PPN)",
+                "contractMonth": "3 (tiga) bulan kontrak berturut-turut"
+            },
+            {
+                "id": "3",
+                "code": "GOL100",
+                "contractUnit": "100",
+                "marginPerLotSpot": "3000000",
+                "marginPerLotRemote": "1000000",
+                "marginPerLotNone": "",
+                "commissionPerSideLot": "50000",
+                "tradingDaysAndHour": "09.30 - 17.30 WIB (Senin - Jumat) 17.45 - 18.00 WIB (Jam perdagangan setelah sesi penutupan dengan menggunakan harga Penyelesaian)",
+                "minimumPriceChange": "50",
+                "price": "Rupiah per gram (termasuk PPN)",
+                "contractMonth": "3 (tiga) bulan kontrak berturut-turut"
+            },
+            {
+                "id": "4",
+                "code": "GOL10",
+                "contractUnit": "10",
+                "marginPerLotSpot": "",
+                "marginPerLotRemote": "",
+                "marginPerLotNone": "300000",
+                "commissionPerSideLot": "1500",
+                "tradingDaysAndHour": "Pukul : 09.30 - 04.30 WIB. (Hari berikutnya)",
+                "minimumPriceChange": "200",
+                "price": "Rupiah per gram (termasuk PPN)",
+                "contractMonth": "3 (tiga) bulan kontrak berturut-turut"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Kopi",
+        "desc": "Indonesia adalah salah satu produsen dan pengekspor kopi terbesar dunia. Kopi arabika menyumbang 75-80 persen dari produksi kopi di dunia, sedangkan robusta 20 persen. Brazil diketahui menjadi negara terbesar pengekspor kopi arabika, sementara pengekspor robusta berasal dari Vietnam. Indonesia menjadi urutan kedua setelah Brazil. Kopi di Indonesia memiliki sejarah panjang dan memiliki peranan penting bagi pertumbuhan perekonomian masyarakat diberkati dengan letak geografisnya yang sangat cocok difungsikan sebagai lahan perkebunan kopi. Letaknya sangat ideal bagi iklim mikro untuk pertumbuhan dan produksi kopi. Kopi arabika dan robusta juga diperdagangkan di Bursa Berjangka sebagai sarana Lindung Nilai bagi pelaku pasar fisik dan pelaku pasar secara umum yang bisa memanfaatkan fluktuasi harganya untuk mendapatkan capital gain. Kontrak Berjangka Kopi Arabika dan Kontrak Berjangka Kopi Robusta memiliki periode perdagangan satu tahun untuk tiap-tiap bulan kontrak yang diperdagangkan. Pada saat jatuh tempo, pelaku pasar bisa memilih untuk melakukan serah terima fisik sesuai ketentuan yang berlaku pada gudang-gudang terdaftar yang berlokasi dekat sentra produksi kopi masing-masing.",
+        "imgUrl": "/public/images/attachments/Kopi.png",
+        "futuresContracts": [
+            {
+                "id": "5",
+                "code": "ACF",
+                "contractUnit": "2 Metrik Ton (2.000 kg)",
+                "marginPerLotSpot": "5000000",
+                "marginPerLotRemote": "3000000",
+                "marginPerLotNone": "",
+                "commissionPerSideLot": "150000",
+                "tradingDaysAndHour": "I : 08.30 - 11.30 WIB. II : 16.00 - 02.00 WIB",
+                "minimumPriceChange": "50",
+                "price": "Rupiah per kilogram (termasuk PPN)",
+                "contractMonth": "5 bulan kontrak: Maret, Mei, Juli, September dan Desember"
+            },
+            {
+                "id": "6",
+                "code": "RCF",
+                "contractUnit": "5 Metrik Ton (5.000 kg)",
+                "marginPerLotSpot": "6000000",
+                "marginPerLotRemote": "4000000",
+                "marginPerLotNone": "",
+                "commissionPerSideLot": "150000",
+                "tradingDaysAndHour": "I : 09.30 - 11.30 WIB. II : 14.00 - 23.00 WIB",
+                "minimumPriceChange": "10",
+                "price": "Rupiah per kilogram (termasuk PPN)",
+                "contractMonth": "6 bulan kontrak: Januari, Maret, Mei, Juli, September dan November"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Olein",
+        "desc": "Olein adalah minyak goreng yang dibuat dari minyak kelapa sawit/Crude Palm Oil (CPO) setelah melalui proses rafinasi dan fraksinasi. Minyak goreng merupakan salah satu bahan pangan yang memiliki tingkat konsumsi yang tinggi dan sebagian besar olein yang diproduksi di Indonesia digunakan untuk konsumsi dalam negeri. Olein juga diperdagangkan di bursa dan salah satunya adalah Bursa Berjangka Jakarta (BBJ) dengan nama Kontrak Berjangka Olein. Keberadaan kontrak berjangka Olein di bursa bisa dijadikan sarana Lindung Nilai (Hedging) bagi pelaku pasar fisik untuk melindungi asetnya dari fluktuasi harga pasar ataupun hanya sebagai sarana jual beli untuk meraih peluang keuntungan.",
+        "imgUrl": "/public/images/attachments/Olein.png",
+        "futuresContracts": [
+            {
+                "id": "7",
+                "code": "OLE",
+                "contractUnit": "20 Ton (20.000 Kg)",
+                "marginPerLotSpot": "",
+                "marginPerLotRemote": "",
+                "marginPerLotNone": "3000000",
+                "commissionPerSideLot": "250000",
+                "tradingDaysAndHour": "09.30 - 17.30 WIB (Senin - Jumat)",
+                "minimumPriceChange": "Rp 5,-(lima rupiah)/Kg. Rp 50.000,-(lima puluh ribu rupiah)/Lot",
+                "price": "Rupiah per kilogram",
+                "contractMonth": "6 (enam) bulan kontrak berturut-turut"
+            },
+            {
+                "id": "8",
+                "code": "OLE10",
+                "contractUnit": "10 Ton (10.000 Kg)",
+                "marginPerLotSpot": "",
+                "marginPerLotRemote": "",
+                "marginPerLotNone": "2000000",
+                "commissionPerSideLot": "100000",
+                "tradingDaysAndHour": "09.30 - 17.30 WIB (Senin - Jumat)",
+                "minimumPriceChange": "Rp 5,-(lima rupiah)/Kg. Rp 50.000,-(lima puluh ribu rupiah)/Lot",
+                "price": "Rupiah per kilogram",
+                "contractMonth": "6 (enam) bulan kontrak berturut-turut"
+            },
+            {
+                "id": "9",
+                "code": "OLE01",
+                "contractUnit": "100",
+                "marginPerLotSpot": "",
+                "marginPerLotRemote": "",
+                "marginPerLotNone": "30000",
+                "commissionPerSideLot": "1500",
+                "tradingDaysAndHour": "09.30 - 17.00 WIB (Senin - Jumat)",
+                "minimumPriceChange": "Rp 20,-(dua puluh rupiah)/Kg. Rp 2.000,-(dua ribu rupiah)/Lot",
+                "price": "Rupiah per kilogram",
+                "contractMonth": "6 (enam) bulan kontrak berturut-turut"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Kakao",
+        "desc": "Kakao Indonesia menjadi salah satu komoditas yang dilirik di pasar perdagangan internasional. Menariknya, bahan baku pembuat coklat asal Indonesia ini bahkan sangat diminati oleh sejumlah negara maju. Badan Pusat Statistik (BPS) mencatat, nilai ekspor kakao dan olahannya dari Indonesia sebesar US$1,21 miliar. Melihat trennya, ekspor kakao bergerak fluktuatif dalam dekade terakhir. Produksi kakao Indonesia sebagian besar diekspor ke mancanegara dan sisanya dipasarkan di dalam negeri. Ekspor kakao Indonesia menjangkau lima benua yaitu Asia, Amerika, Eropa, Afrika, dan Australia dengan pangsa utama di Asia. Kakao juga diperdagangkan di Bursa Berjangka di Indonesia sebagai sarana Lindung Nilai bagi pelaku pasar fisik dan pelaku pasar secara umum yang bisa memanfaatkan fluktuasi harganya untuk mendapatkan capital gain.",
+        "imgUrl": "/public/images/attachments/Kakao.png",
+        "futuresContracts": [
+            {
+                "id": "10",
+                "code": "CC5",
+                "contractUnit": "5 Metrik Ton (5.000 kg)",
+                "marginPerLotSpot": "8000000",
+                "marginPerLotRemote": "5000000",
+                "marginPerLotNone": "",
+                "commissionPerSideLot": "250000",
+                "tradingDaysAndHour": "Setiap hari (Senin - Jumat). I : 08.30 - 12.30 WIB. II : 16.00 - 02.00 WIB",
+                "minimumPriceChange": "Rp 10,-/kilogram",
+                "price": "Rupiah per kilogram (termasuk PPN)",
+                "contractMonth": "5 bulan kontrak: Maret, Mei, Juli, September dan Desember"
+            }
+        ]
+    }
+]

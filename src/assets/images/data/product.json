@@ -1,0 +1,54 @@
+[
+  {
+    "name": "emas",
+    "desc": "Emas adalah salah satu jenis logam mulia yang paling populer. Karakteristik emas itu mudah ditempa, elastis, warnanya kuning mengkilap, dan emas tidak mudah terkontaminasi zat kimia lain. Oleh sebab itu, emas sering menjadi bahan perhiasan seperti anting, kalung, cincin, gelang, dan perhiasan lainnya. Emas juga diperdagangkan di Bursa Berjangka berupa Kontrak Berjangka Emas yaitu kontrak dengan dasar emas batangan dengan kemurnian 99,99% yang dilengkapi dengan sertifikat ANTAM/LBMA. Kontrak ini memiliki jangka waktu transaksi paling lama tiga bulan dan pada saat jatuh tempo kontrak, serah terima fisik emas batangan dapat dilakukan sesuai dengan ketentuan yang berlaku. Semua kontrak berjangka emas dengan beberapa variannya diharapkan dapat memfasilitasi lebih banyak pelaku pasar baik untuk kegiatan Lindung Nilai maupun untuk tujuan investasi.",
+    "image": "Gold.png",
+    "kontrak": {
+      "gol": {
+        "satuanKontrak": "1000 Gram",
+        "marginPerLot": {
+          "spot": "Rp.7.000.000,-",
+          "remote": "Rp.4.500.000,-"
+        },
+        "komisiPerLot": "Rp 250.000,-",
+        "hariJamPerdagangan": "09.30 – 17.30 WIB (Senin – Jumat) 17.45 – 18.00 WIB (Jam perdagangan setelah sesi penutupan dengan menggunakan harga Penyelesaian)",
+        "perubahanHarga": "Rp 50,-/gram",
+        "harga": "Rupiah per gram (termasuk PPN)",
+        "bulanKontrak": "3 (tiga) bulan kontrak berturut-turut"
+      },
+      "gol250": {
+        "satuanKontrak": "250 Gram",
+        "marginPerLot": {
+          "spot": "Rp.5.000.000,-",
+          "remote": "Rp.2.000.000,-"
+        },
+        "komisiPerLot": "Rp 150.000,-",
+        "hariJamPerdagangan": "09.30 – 17.30 WIB (Senin – Jumat) 17.45 – 18.00 WIB (Jam perdagangan setelah sesi penutupan dengan menggunakan harga Penyelesaian)",
+        "perubahanHarga": "Rp 50,-/gram",
+        "harga": "Rupiah per gram (termasuk PPN)",
+        "bulanKontrak": "3 (tiga) bulan kontrak berturut-turut"
+      },
+      "gol100": {
+        "satuanKontrak": "250 Gram",
+        "marginPerLot": {
+          "spot": "Rp.5.000.000,-",
+          "remote": "Rp.2.000.000,-"
+        },
+        "komisiPerLot": "Rp 150.000,-",
+        "hariJamPerdagangan": "09.30 – 17.30 WIB (Senin – Jumat) 17.45 – 18.00 WIB (Jam perdagangan setelah sesi penutupan dengan menggunakan harga Penyelesaian)",
+        "perubahanHarga": "Rp 50,-/gram",
+        "harga": "Rupiah per gram (termasuk PPN)",
+        "bulanKontrak": "3 (tiga) bulan kontrak berturut-turut"
+      }
+    }
+  },
+  {
+    "kopi": {}
+  },
+  {
+    "olein": {}
+  },
+  {
+    "kakao": {}
+  }
+]

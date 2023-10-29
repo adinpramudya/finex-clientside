@@ -1,0 +1,55 @@
+<template>
+  <div class="px-8 lg:px-[118px] mt-20 mb-10 lg:flex lg:justify-between lg:items-center">
+    <div class="flex-col mb-[50px] lg:mb-0 lg:w-1/2 w-full">
+      <div class="lg:w-[454px] w-full lg:mx-auto">
+        <h1 class="font-bold text-base">Aplikasi JAFeTS NOW</h1>
+        <div class="mt-10"></div>
+        <div class="my-5 flex items-center">
+          <div class="mr-10">
+            <img src="../assets/images/cheklist.png" class="w-20 lg:w-[55px]" alt="checklist" />
+          </div>
+          <p class="text-sm font-medium">
+            Aplikasi canggih yang menyediakan informasi grafik pergerakan harga, market depth,
+            posisi keuangan nasabah, dan lain-lain.
+          </p>
+        </div>
+        <div class="my-5 flex items-center">
+          <div class="mr-10">
+            <img src="../assets/images/cheklist.png" class="w-24 lg:w-[64px]" alt="checklist" />
+          </div>
+          <p class="text-sm font-medium">
+            Aplikasi resmi yang disediakan oleh Jakarta Futures Exchange (JFX).Dapat digunakan
+            melalui browser ataupun diunduh dari Play Store/App Store.
+          </p>
+        </div>
+        <button class="btn-primary w-full py-2 mt-5">Klik Disini</button>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <img src="../assets/images/platform-jafets 1.png" alt="jafets" class="mx-auto lg:w-[531px]" />
+    </div>
+  </div>
+</template>
+
+<script>
+import icons from './icons.vue'
+export default {
+  components: {
+    icons
+  },
+  data() {
+    return {
+      recommendations: [
+        {
+          id: 1,
+          desc: ''
+        },
+        {
+          id: 2,
+          desc: ''
+        }
+      ]
+    }
+  }
+}
+</script>
