@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <ProductWeb :dataProduct="product" class="hidden lg:block" />
-    <ProductMobile class="block lg:hidden" />
+    <ProductMobile class="block lg:hidden" :dataProduct="product" />
     <FooterVue />
   </div>
 </template>

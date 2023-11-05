@@ -97,19 +97,31 @@
           </li>
 
           <div class="lg:flex lg:border-l-2 lg:border-slate-900 lg:pl-8 lg:ml-0 ml-8">
-            <div class="lg:flex cursor-pointer" v-if="user" @click="userStore.logoutUser">
-              <div class="flex items-center lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0" @click="login">
-                <icons name="ic-login" width="20" height="20"></icons>
-                <span class="font-bold ml-1">Sign Out</span>
+            <div class="lg:flex cursor-pointer relative ml-2 mt-2 lg:ml-0 lg:mt-0" v-if="user">
+              <div class="flex items-center w-[150px]" @click="openDropdownAccount">
+                <p class="mr-4 font-bold truncate">{{ user.fullname }}</p>
+                <icons name="ic-arrow-down" width="14" height="7"></icons>
+              </div>
+              <div
+                v-if="isShowDropdown"
+                class="w-full absolute top-10 right-0 bg-textPrimary border-[1px] shadow-xl border-slate-600"
+              >
+                <p class="py-2 px-6 font-bold hover:bg-sunglow" @click="openDashboard">Buka Akun</p>
+                <div
+                  @click="userStore.logoutUser"
+                  class="w-100 flex items-center py-2 px-6 hover:bg-sunglow my-3 lg:my-0 mb-4 lg:mb-0"
+                >
+                  <icons name="ic-login" width="20" height="20"></icons>
+                  <span class="font-bold ml-1">Sign Out</span>
+                </div>
               </div>
             </div>
             <router-link to="/login" class="lg:flex" v-else>
               <div class="flex items-center lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0" @click="login">
                 <icons name="ic-login" width="20" height="20"></icons>
-                <span class="font-bold ml-1">Masuk</span>
+                <span class="font-bold ml-1">Sign In</span>
               </div>
             </router-link>
-            <button class="btn-primary p-2">Buka Akun</button>
           </div>
         </ul>
       </nav>
@@ -137,7 +149,8 @@ export default {
   data() {
     return {
       isShowHamburger: false,
-      isShowProduct: false
+      isShowProduct: false,
+      isShowDropdown: false
     }
   },
   methods: {
@@ -146,13 +159,18 @@ export default {
       if (!this.isShowHamburger) {
         this.isShowProduct = false
       }
-      console.log(this.isShowHamburger)
+    },
+    openDropdownAccount() {
+      this.isShowDropdown = !this.isShowDropdown
     },
     showProduct() {
       this.isShowProduct = !this.isShowProduct
     },
     toProduct(name) {
       router.push({ name: 'product', params: { name: name } })
+    },
+    openDashboard() {
+      router.push({ name: 'dashboard' })
     }
   },
   setup() {

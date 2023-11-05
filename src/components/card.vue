@@ -1,7 +1,8 @@
 <template>
-  <div class="w-[295px] border-2">
+  <div class="w-full">
     <div
-      class="bg-sunglow flex items-center p-[10px] relative z-10"
+      @click="openCard"
+      class="flex items-center p-[10px] relative z-10"
       :class="
         !isShow
           ? 'rounded-md transition-all ease-in-out duration-500'
@@ -17,10 +18,14 @@
         height="16"
         color="#FFFFFF"
       ></icons>
-      <h3 class="font-bold text-white">{{ title }}</h3>
+      <icons class="mr-2" name="ic_emas" v-if="name == 'Emas'"></icons>
+      <icons class="mr-2" name="ic_kakao" v-if="name == 'Kakao'"></icons>
+      <icons class="mr-2" name="ic_olein" v-if="name == 'Olein'"></icons>
+      <icons class="mr-2" name="ic_kopi" v-if="name == 'Kopi'"></icons>
+      <h3 class="font-bold text-slate-900">{{ title }}</h3>
     </div>
     <div
-      class="py-[10px] px-[15px] bg-textPrimary rounded-b-md border-sunglow"
+      class="pt-[10px] bg-textPrimary rounded-b-md border-sunglow"
       :class="
         isShow
           ? 'transform translate-y-0 transition-all ease-in-out duration-500 static'
@@ -28,13 +33,84 @@
       "
     >
       <div class="grid grid-cols-12">
-        <div class="col-span-6">TESTTTTT</div>
-        <div class="col-span-6">TESTTTTT</div>
+        <div
+          class="col-span-6 flex items-center border-r-2 border-t-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Satuan Kontrak
+        </div>
+        <div class="col-span-6 border-t-2 border-b-2 px-3 -mr-1 border-black py-4">
+          {{ contractUnit }}
+        </div>
+      </div>
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-6 flex items-center border-r-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Margin per lot
+        </div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
+          <div class="flex flex-col">
+            <div class="">
+              <p class="mb-2">Spot :</p>
+              <p>Rp {{ marginPerLotSpot }}</p>
+            </div>
+            <div class="">
+              <p class="mb-2">Remote :</p>
+              <p>Rp {{ marginPerLotRemote }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-6 flex items-center border-r-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Komisi per lot sisi
+        </div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
+          {{ commissionPerSideLot }}
+        </div>
+      </div>
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-6 flex items-center border-r-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Hari dan Jam Perdagangan
+        </div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
+          {{ tradingDaysAndHour }}
+        </div>
+      </div>
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-6 flex items-center border-r-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Perubahan Harga Minimum
+        </div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
+          {{ minimumPriceChange }}
+        </div>
+      </div>
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-6 flex items-center border-r-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Harga
+        </div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">{{ price }}</div>
+      </div>
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-6 flex items-center border-r-2 border-b-2 px-3 -ml-1 border-black py-4"
+        >
+          Bulan Kontrak
+        </div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">{{ contractMonth }}</div>
       </div>
     </div>
   </div>
 </template>
-<script lang="ts">
+<script>
 import icons from '../components/icons.vue'
 export default {
   components: {
@@ -42,8 +118,17 @@ export default {
   },
   props: {
     title: String,
-    desc: String,
-    image: String
+    name: String,
+    image: String,
+    contractUnit: String,
+    marginPerLotSpot: String,
+    marginPerLotRemote: String,
+    marginPerLotNone: String,
+    commissionPerSideLot: String,
+    tradingDaysAndHour: String,
+    minimumPriceChange: String,
+    price: String,
+    contractMonth: String
   },
   data() {
     return {

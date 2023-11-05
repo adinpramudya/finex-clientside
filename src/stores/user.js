@@ -90,6 +90,9 @@ export const useUserStore = defineStore('userStore', {
     userLogin(state) {
       console.log('state', state.userData)
       return state.userData
+    },
+    isAuthenticated: (state) => {
+      return state.isAuth // code to check if authenticated
     }
   }
 })
