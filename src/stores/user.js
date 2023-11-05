@@ -21,8 +21,10 @@ export const useUserStore = defineStore('userStore', {
   }),
   actions: {
     setUser(user) {
-      console.log('usersasas', user)
       this.userData = user
+    },
+    setLoggedIn(login) {
+      this.isLoggedIn = login
     },
     async registerUser(email, password, fullname) {
       this.loadingUser = true
@@ -31,6 +33,8 @@ export const useUserStore = defineStore('userStore', {
         await updateProfile(user, {
           displayName: fullname
         })
+        this.setLoggedIn(true)
+
         await this.setUser(user)
         router.push('/')
       } catch (error) {
@@ -43,7 +47,8 @@ export const useUserStore = defineStore('userStore', {
       this.loadingUser = true
       try {
         const { user } = await signInWithEmailAndPassword(auth, email, password)
-        await this.setUser(user)
+        this.setLoggedIn(true)
+        this.setUser(user)
         router.push('/')
       } catch (error) {
         console.log(error)
@@ -55,6 +60,7 @@ export const useUserStore = defineStore('userStore', {
       try {
         await signOut(auth)
         this.userData = null
+        this.setLoggedIn(false)
         router.push('/login')
       } catch (error) {
         console.log(error)
@@ -63,14 +69,14 @@ export const useUserStore = defineStore('userStore', {
     currentUser() {
       onAuthStateChanged(auth, async (user) => {
         if (user) {
+          this.setLoggedIn(true)
           let userLogin = {
             email: user.email,
             uid: user.uid,
             fullname: user.displayName,
             token: user.accessToken
           }
-
-          await this.setUser(userLogin)
+          this.setUser(userLogin)
         }
       })
     },
@@ -80,6 +86,7 @@ export const useUserStore = defineStore('userStore', {
         .then((res) => {
           this.setUser(toRaw(res._tokenResponse))
           router.push('/')
+          this.setLoggedIn(true)
         })
         .catch((error) => {
           console.log(error)
@@ -92,7 +99,7 @@ export const useUserStore = defineStore('userStore', {
       return state.userData
     },
     isAuthenticated: (state) => {
-      return state.isAuth // code to check if authenticated
+      return state.isLoggedIn // code to check if authenticated
     }
   }
 })

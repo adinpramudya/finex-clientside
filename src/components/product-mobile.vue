@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="my-11 py-6 px-4 rounded-t-2xl bg-sunglow rounded-b-full">
+    <div class="my-11 py-6 px-4 rounded-t-2xl bg-sunglow rounded-3xl">
       <h1 class="font-bold text-2xl">{{ dataProduct.name }}</h1>
       <p class="mt-4 text-base">
         {{ dataProduct.desc }}

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import landingPage from '../views/landing-page.vue'
 import { useUserStore } from '../stores/user'
+import { computed, onMounted } from 'vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -42,14 +43,16 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach
-
 router.beforeEach(function (to, _, next) {
   const userStore = useUserStore()
-  console.log('tometa', to.meta)
-  if (to.meta.requiresAuth && userStore.isAuthenticated) {
+  const isAuth = computed(() => {
+    return userStore.isAuthenticated
+  })
+  console.log(isAuth.value)
+  console.log(to.meta)
+  if (to.meta.requiresAuth && !isAuth.value) {
     next('/login')
-  } else if (to.meta.requiresUnauth && !userStore.isAuthenticated) {
+  } else if (to.meta.requiresUnauth && isAuth.value) {
     next('/')
   } else {
     next()
