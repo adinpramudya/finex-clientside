@@ -1,6 +1,6 @@
 <template>
   <div class="mb-20">
-    <div class="pt-20 h-max bg-sunglow pb-20 rounded-3xl">
+    <div class="pt-20 h-max bg-sunglow pb-20 rounded-b-[10rem]">
       <div class="px-[118px] grid grid-cols-12">
         <div class="flex-col col-span-8">
           <h1 class="font-bold text-3xl">{{ dataProduct.name }}</h1>
