@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-56">
+  <div class="lg:pb-56 pb-32 bg-textPrimary">
     <img src="../assets/images/Union.png" alt="bg" class="lg:hidden w-full h-[1280px]" />
     <img src="../assets/images/bg-desk (2).png" alt="bg" class="hidden lg:block w-full h-[700px]" />
     <div class="pt-[80px] -mt-[1300px] lg:flex lg:-mt-[730px] lg:px-[118px] lg:justify-between">

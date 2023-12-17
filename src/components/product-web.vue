@@ -8,7 +8,11 @@
             {{ dataProduct.desc }}
           </p>
         </div>
-        <img :src="dataProduct?.attachment?.url" class="h-[308px] col-span-4 ml-auto" alt="gold" />
+        <img
+          :src="dataProduct?.attachment?.url"
+          class="h-[308px] col-span-4 ml-auto"
+          :alt="dataProduct.name"
+        />
       </div>
     </div>
     <div class="px-[118px] mt-32">

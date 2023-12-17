@@ -1,5 +1,7 @@
 <template>
-  <div class="px-8 lg:px-[118px] mt-20 mb-10 lg:flex lg:justify-between lg:items-center">
+  <div
+    class="px-8 lg:px-[118px] pt-20 mb-10 lg:flex lg:justify-between lg:items-center bg-textPrimary"
+  >
     <div class="flex-col mb-[50px] lg:mb-0 lg:w-1/2 w-full">
       <div class="lg:w-[454px] w-full lg:mx-auto">
         <h1 class="font-bold text-base">Aplikasi JAFeTS NOW</h1>

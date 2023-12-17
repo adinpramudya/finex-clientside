@@ -5,7 +5,11 @@
       <p class="mt-4 text-base">
         {{ dataProduct.desc }}
       </p>
-      <img :src="`../..${dataProduct.imgUrl}`" class="h-[128px] mx-auto mt-4" alt="gold" />
+      <img
+        :src="dataProduct.attachment?.url"
+        class="h-[128px] mx-auto mt-4"
+        :alt="dataProduct.name"
+      />
     </div>
     <div class="px-4">
       <p class="font-bold text-lg mb-10">Kontrak Berjangka {{ dataProduct.name }}</p>
@@ -14,7 +18,11 @@
           <p class="text-base p-3 font-bold">Kode</p>
         </div>
         <div class="p-1">
-          <div class="bg-white" v-for="(data, index) in dataProduct.futuresContracts" :key="index">
+          <div
+            class="bg-textPrimary"
+            v-for="(data, index) in dataProduct.FuturesContract"
+            :key="index"
+          >
             <Card
               :name="dataProduct.name"
               :title="data.code"
@@ -23,7 +31,7 @@
               :marginPerLotSpot="data.marginPerLotSpot"
               :marginPerLotNone="data.marginPerLotNone"
               :commissionPerSideLot="data.commissionPerSideLot"
-              :tradingDaysAndHour="data.tradingDaysAndHour"
+              :tradingDaysAndHours="data.tradingDaysAndHours"
               :minimumPriceChange="data.minimumPriceChange"
               :price="data.price"
               :contractMonth="data.contractMonth"

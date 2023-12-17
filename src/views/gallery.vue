@@ -9,14 +9,21 @@
         :autoplay="false"
         :bullets="false"
         @slide="$refs.vueperslides2.goToSlide($event.currentSlide.index, { emit: false })"
-        fixed-height="600px"
+        fixed-height="900px"
       >
         <vueper-slide
-          v-for="(slide, i) in slides"
+          style="
+            width: 800px;
+            object-fit: contain;
+            background-size: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: auto;
+          "
+          v-for="(slide, i) in galleries"
           :key="i"
-          :image="slide.image"
-          :title="slide.title"
-          :content="slide.content"
+          :image="slide.url"
+          :content="slide.caption"
         >
         </vueper-slide>
       </vueper-slides>
@@ -32,9 +39,18 @@
         :arrows="false"
       >
         <vueper-slide
-          v-for="(slide, i) in slides"
+          style="
+            width: 100px;
+            object-fit: contain;
+            background-size: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: auto;
+            margin-bottom: 0px;
+          "
+          v-for="(slide, i) in galleries"
           :key="i"
-          :image="slide.image"
+          :image="slide.url"
           @click.native="$refs.vueperslides2.goToSlide(i)"
         >
         </vueper-slide>
@@ -43,6 +59,24 @@
     <footerVue />
   </div>
 </template>
+
+<style>
+.vueperslides__arrow svg {
+  stroke: black;
+}
+.vueperslide__content {
+  background: rgba(44, 51, 51, 0.8);
+  color: white;
+  border-radius: 10px;
+  font-weight: 800;
+  width: 162%;
+  font-size: 16px;
+  padding: 15px 0;
+}
+.vueperslides--fixed-height.vueperslides--bullets-outside {
+  margin-bottom: 0px;
+}
+</style>
 
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides'
@@ -54,6 +88,7 @@ import galeri4 from '@/assets/images/galeri/galeri-4.jpg'
 import galeri5 from '@/assets/images/galeri/galeri-5.jpg'
 import navbar from '@/components/navbar.vue'
 import footerVue from '@/components/footer.vue'
+import { useDataStore } from '../stores/data'
 
 export default {
   components: { VueperSlides, VueperSlide, navbar, footerVue },
@@ -108,6 +143,18 @@ export default {
         image: galeri4
       }
     ]
-  })
+  }),
+  mounted() {
+    this.dataStore.retrieveGalleries()
+  },
+  computed: {
+    galleries() {
+      return this.dataStore.galeries
+    }
+  },
+  setup() {
+    const dataStore = useDataStore()
+    return { dataStore }
+  }
 }
 </script>

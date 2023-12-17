@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { defineStore } from 'pinia'
-const BASE_API = 'https://api.finexkomoditi.id/v1/'
+const BASE_API = 'https://api.finexkomoditi.id/v1'
 export const useDataStore = defineStore('dataStore', {
   state: () => ({
     products: [],
-    posts: null,
+    posts: [],
     contact: null,
-    galeries: null,
+    galeries: [],
     isFetchingData: false
   }),
 
@@ -32,8 +32,31 @@ export const useDataStore = defineStore('dataStore', {
         .catch((err) => {
           console.log('error', err)
         })
+    },
+    async retrieveGalleries() {
+      this.isFetchingData = true
+      await axios
+        .get(`${BASE_API}/galleries`)
+        .then(async (res) => {
+          this.galeries = await res.data.data
+        })
+        .catch((err) => {
+          console.log('error', err)
+        })
+    },
+    async retrieveAPosts(params = null) {
+      this.isFetchingData = true
+      await axios
+        .get(`${BASE_API}/posts/${params ? params : ''}`)
+        .then(async (res) => {
+          this.posts = await res.data.data
+        })
+        .catch((err) => {
+          console.log('error', err)
+        })
     }
   },
+
   getters: {
     getProduct(state) {
       return state.products

@@ -1,5 +1,6 @@
 <template>
   <div class="bg-textPrimary">
+    {{ posts }}
     <navbar />
     <cardNews :news="displayedItems"></cardNews>
     <fwb-pagination
@@ -18,31 +19,44 @@ import footerVue from '../components/footer.vue'
 import navbar from '../components/navbar.vue'
 import cardNews from '@/components/card-news.vue'
 import { FwbPagination } from 'flowbite-vue'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
+import { useDataStore } from '../stores/data'
 
-const currentPage = ref(1)
-
-const nextPage = (page) => {
-  console.log('dadada', page)
-}
-const setPage = (page) => {
-  console.log('dadada', page)
-}
-const itemsPerPage = ref(5)
-
-const totalPages = computed(() => {
-  return Math.ceil(datas.length / itemsPerPage.value)
+const dataStore = useDataStore()
+onMounted(() => {
+  dataStore.retrieveAPosts()
 })
 
 const displayedItems = computed(() => {
   const startIndex = (currentPage.value - 1) * itemsPerPage.value
   const endIndex = startIndex + itemsPerPage.value
-  return datas.slice(startIndex, endIndex)
+  return dataStore.posts.slice(startIndex, endIndex)
 })
 
+// console.log('postttt', posts)
+
+// const allPosts = Object.values(posts.value)
+
+const currentPage = ref(1)
+
+const itemsPerPage = ref(5)
+
+const totalPages = computed(() => {
+  return Math.ceil(dataStore.posts.length / itemsPerPage.value)
+})
+
+// const displayedItems = computed(() => {
+//   const startIndex = (currentPage.value - 1) * itemsPerPage.value
+//   const endIndex = startIndex + itemsPerPage.value
+//   return datas.slice(startIndex, endIndex)
+// })
+console.log('display', displayedItems)
 const handlePageChange = (newPage) => {
   currentPage.value = newPage
 }
+// watch(posts.value, (newVal, oldVal) => {
+//   console.log(newVal)
+// })
 
 const datas = [
   {

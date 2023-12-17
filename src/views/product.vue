@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-textPrimary">
     <Navbar />
     <ProductWeb :dataProduct="product" class="hidden lg:block" />
     <ProductMobile class="block lg:hidden" :dataProduct="product" />
@@ -30,7 +30,7 @@ export default {
     this.dataStore.retrieveAllProduct(this.$route.params.id)
   },
 
-  setup(context) {
+  setup() {
     const dataStore = useDataStore()
 
     const product = computed(() => {

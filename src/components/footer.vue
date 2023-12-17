@@ -12,9 +12,15 @@
         <div class="flex flex-col">
           <h1 class="text-base lg:text-2xl font-extrabold mb-1">Ikuti Kami</h1>
           <div class="flex justify-between">
-            <img class="w-4 lg:w-8" src="../assets/images/sosmed/facebook.png" alt="facebook" />
-            <img class="w-4 lg:w-8" src="../assets/images/sosmed/instagram.png" alt="instagram" />
-            <img class="w-4 lg:w-8" src="../assets/images/sosmed/youtube.png" alt="youtube" />
+            <a href="">
+              <img class="w-4 lg:w-8" src="../assets/images/sosmed/facebook.png" alt="facebook" />
+            </a>
+            <a href="">
+              <img class="w-4 lg:w-8" src="../assets/images/sosmed/instagram.png" alt="instagram" />
+            </a>
+            <a href="">
+              <img class="w-4 lg:w-8" src="../assets/images/sosmed/youtube.png" alt="youtube" />
+            </a>
           </div>
         </div>
       </div>
@@ -34,7 +40,7 @@
         </div>
         <div>
           <h1 class="font-bold">Hubungi Kami</h1>
-          <p class="mt-3">Kontak</p>
+          <p class="mt-3" @click="toKontak">Kontak</p>
         </div>
       </div>
       <div class="lg:w-1/2 mt-5">
@@ -74,6 +80,9 @@ export default {
   methods: {
     toProduct(id) {
       router.push({ name: 'product', params: { id: id } })
+    },
+    toKontak() {
+      router.push({ name: 'contact' })
     }
   },
   setup() {
@@ -89,7 +98,7 @@ export default {
     const toProduct = (id) => {
       router.push({ name: 'product', params: { id: id } })
     }
-    return { dataStore }
+    return { dataStore, toProduct }
   }
 }
 </script>

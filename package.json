@@ -13,6 +13,7 @@
     "@swiper/core": "^0.0.21",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
     "dotenv": "^16.3.1",
     "firebase": "^10.5.2",
     "flowbite": "^2.2.1",
@@ -22,8 +23,6 @@
     "swiper": "^10.3.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
-    "vue-toastification": "^2.0.0-rc.5",
-    "vue3-toastify": "^0.1.14",
     "vueperslides": "^3.3.2"
   },
   "devDependencies": {

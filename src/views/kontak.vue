@@ -4,13 +4,21 @@
     <fwb-toast v-if="isSend" class="fixed right-0" closable type="success">
       Send Message successfully.
     </fwb-toast>
-    <div class="px-8 lg:px-28 mb-6">
-      <img src="../assets/images/maps.png" alt="maps" class="lg:w-full" />
+    <div class="px-8 lg:px-28 pb-6">
+      <iframe
+        :src="contact?.gmapUrl"
+        class="w-full"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
       <h1 class="text-sm text-woodsmkoke my-4 lg:text-base">
         Kami percaya dari kekuatan komunikasi sederhana
       </h1>
       <div class="lg:flex">
-        <div class="bg-sunglow p-[26px] rounded-2xl w-full lg:w-2/3">
+        <div class="bg-sunglow p-[26px] rounded-2xl w-full lg:w-2/5">
           <h1 class="font-bold mb-8 text-center text-woodsmkoke">Kirimkan pesan kepada kami</h1>
           <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="username"> Nama </label>
@@ -52,7 +60,7 @@
             KIRIM PESAN
           </button>
         </div>
-        <div class="mt-7 w-full lg:w-1/3 lg:ml-7">
+        <div class="mt-7 w-full lg:w-3/5 lg:ml-7">
           <div class="grid grid-cols-12 mt-6 items-center">
             <img
               src="../assets/images/icons/location.png"

@@ -52,11 +52,11 @@
           <div class="flex flex-col">
             <div class="">
               <p class="mb-2">Spot :</p>
-              <p>Rp {{ marginPerLotSpot }}</p>
+              <p>{{ marginPerLotSpot ? formattedValue(marginPerLotSpot) : '-' }}</p>
             </div>
             <div class="">
               <p class="mb-2">Remote :</p>
-              <p>Rp {{ marginPerLotRemote }}</p>
+              <p>Rp {{ marginPerLotRemote ? formattedValue(marginPerLotRemote) : '-' }}</p>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
           Komisi per lot sisi
         </div>
         <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
-          {{ commissionPerSideLot }}
+          {{ commissionPerSideLot ? formattedValue(commissionPerSideLot) : '-' }}
         </div>
       </div>
       <div class="grid grid-cols-12">
@@ -78,7 +78,7 @@
           Hari dan Jam Perdagangan
         </div>
         <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
-          {{ tradingDaysAndHour }}
+          {{ tradingDaysAndHours }}
         </div>
       </div>
       <div class="grid grid-cols-12">
@@ -88,7 +88,7 @@
           Perubahan Harga Minimum
         </div>
         <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
-          {{ minimumPriceChange }}
+          {{ minimumPriceChange ? formattedValue(minimumPriceChange) : '-' }}
         </div>
       </div>
       <div class="grid grid-cols-12">
@@ -97,7 +97,9 @@
         >
           Harga
         </div>
-        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">{{ price }}</div>
+        <div class="col-span-6 border-b-2 px-3 -mr-1 border-black py-4">
+          {{ price }}
+        </div>
       </div>
       <div class="grid grid-cols-12">
         <div
@@ -125,7 +127,7 @@ export default {
     marginPerLotRemote: String,
     marginPerLotNone: String,
     commissionPerSideLot: String,
-    tradingDaysAndHour: String,
+    tradingDaysAndHours: String,
     minimumPriceChange: String,
     price: String,
     contractMonth: String
@@ -140,6 +142,20 @@ export default {
       this.isShow = !this.isShow
       console.log('log', this.isShow)
     }
+  },
+  setup() {
+    const formattedValue = (value) => {
+      return formatCurrency(value)
+    }
+
+    const formatCurrency = (value) => {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(value)
+    }
+    return { formattedValue }
   }
 }
 </script>
