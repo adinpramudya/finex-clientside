@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 lg:px-[116px] lg:flex items-center mt-6 lg:mt-0 bg-textPrimary">
+  <div class="px-4 lg:px-[116px] lg:flex items-center pt-6 lg:mt-0 bg-textPrimary">
     <div class="flex flex-col mr-20 w-full">
       <h1 class="font-bold text-base text-blueBayoux mb-3">Mengapa FINEX Komoditi?</h1>
       <h1 class="text-2xl font-bold mb-5">Broker Komoditi Terbaik di Indonesia</h1>
