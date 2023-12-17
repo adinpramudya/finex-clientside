@@ -11,14 +11,14 @@
         </div>
         <div class="flex flex-col">
           <h1 class="text-base lg:text-2xl font-extrabold mb-1">Ikuti Kami</h1>
-          <div class="flex justify-between">
-            <a href="">
+          <div class="flex justify-between items-center">
+            <a href="https://www.facebook.com/finexbroker" target="_blank">
               <img class="w-4 lg:w-8" src="../assets/images/sosmed/facebook.png" alt="facebook" />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/finex_forex" target="_blank">
               <img class="w-4 lg:w-8" src="../assets/images/sosmed/instagram.png" alt="instagram" />
             </a>
-            <a href="">
+            <a href="https://www.youtube.com/channel/UC-l61LxjsphAAjnoQwGTV6Q" target="_blank">
               <img class="w-4 lg:w-8" src="../assets/images/sosmed/youtube.png" alt="youtube" />
             </a>
           </div>

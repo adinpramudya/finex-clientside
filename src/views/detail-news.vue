@@ -27,7 +27,7 @@
     />
 
     <div class="px-4 mt-9 lg:px-28">
-      <p class="indent-8">
+      <p class="indent-8 text-justify">
         {{ post.content }}
       </p>
     </div>
@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 import footerVue from '../components/footer.vue'
 import navbar from '../components/navbar.vue'
 import { useDataStore } from '../stores/data'
@@ -50,19 +49,24 @@ export default {
   mounted() {
     this.dataStore.retrieveAPosts(this.$route.params.id)
   },
+  computed: {
+    post() {
+      return this.dataStore.posts.find((e) => e.id == this.$route.params.id)
+    }
+  },
   setup() {
     const dataStore = useDataStore()
 
-    const post = computed(() => {
-      return dataStore.posts
-    })
+    // const post = computed(() => {
+    //   return dataStore.posts
+    // })
     const formatDate = (date) => {
       return dayjs(date)
         .locale('id') // Set the locale to Indonesian
         .format('DD MMMM YYYY; HH.mm [WIB]')
     }
 
-    return { dataStore, post, formatDate }
+    return { dataStore, formatDate }
   }
 }
 </script>

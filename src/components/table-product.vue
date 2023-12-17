@@ -27,30 +27,34 @@
           :key="index"
           class="bg-textPrimary border-b dark:bg-gray-800 dark:border-gray-700"
         >
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">{{ data.code }}</td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
+            {{ data.code }}
+          </td>
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.contractUnit }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.marginPerLotSpot ? formattedValue(data.marginPerLotSpot) : '-' }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.marginPerLotRemote ? formattedValue(data.marginPerLotRemote) : '-' }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.marginPerLotNone ? formattedValue(data.marginPerLotNone) : '-' }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.commissionPerSideLot ? formattedValue(data.commissionPerSideLot) : '-' }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.tradingDaysAndHours }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.minimumPriceChange ? formattedValue(data.minimumPriceChange) : '-' }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">{{ data.price }}</td>
-          <td class="px-6 py-4 font-bold border-[1px] border-woodsmkoke">
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
+            {{ data.price }}
+          </td>
+          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.contractMonth }}
           </td>
         </tr>

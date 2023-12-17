@@ -64,7 +64,7 @@
           <div class="grid grid-cols-12 mt-6 items-center">
             <img
               src="../assets/images/icons/location.png"
-              class="col-span-2 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[25px]"
               alt="location"
             />
             <p class="text-sm col-span-10">
@@ -74,7 +74,7 @@
           <div class="grid grid-cols-12 mt-6">
             <img
               src="../assets/images/icons/telephone.png"
-              class="col-span-2 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[25px]"
               alt="telephone"
             />
             <p class="text-sm col-span-10">{{ contact?.telephone }}</p>
@@ -82,7 +82,7 @@
           <div class="grid grid-cols-12 mt-6">
             <img
               src="../assets/images/icons/faksimili.png"
-              class="col-span-2 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[25px]"
               alt="faksimili"
             />
             <p class="text-sm col-span-10">{{ contact?.fax }}</p>
@@ -90,7 +90,7 @@
           <div class="grid grid-cols-12 mt-6">
             <img
               src="../assets/images/icons/whatsapp.png"
-              class="col-span-2 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[25px]"
               alt="whatsapp"
             />
             <p class="text-sm col-span-10">{{ contact?.whatsApp }} (Chat)</p>
@@ -98,7 +98,7 @@
           <div class="grid grid-cols-12 mt-6">
             <img
               src="../assets/images/icons/email.png"
-              class="col-span-2 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[25px]"
               alt="whatsapp"
             />
             <p class="text-sm col-span-10">{{ contact?.email }}</p>

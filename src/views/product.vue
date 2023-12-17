@@ -13,7 +13,7 @@ import ProductMobile from '@/components/product-mobile.vue'
 import ProductWeb from '@/components/product-web.vue'
 import router from '../router/index'
 import { useDataStore } from '../stores/data'
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 export default {
   components: {
     Navbar,
@@ -27,17 +27,28 @@ export default {
   //   this.product = products.find((e) => e.name.toLowerCase() == this.$route.params.name)
   // },
   mounted() {
-    this.dataStore.retrieveAllProduct(this.$route.params.id)
+    // this.dataStore.retrieveAllProduct(this.$route.params.id)
+
+    this.product = this.dataStore.products.find((e) => e.id == this.$route.params.id)
+    console.log('product', this.product)
+  },
+  computed: {
+    product() {
+      return this.dataStore.products.find((e) => e.id == this.$route.params.id)
+      // console.log('prams', this.$route.params.id)
+    }
   },
 
   setup() {
     const dataStore = useDataStore()
 
-    const product = computed(() => {
-      return dataStore.products
-    })
+    // const product = ref()
 
-    return { dataStore, product }
+    // const product = computed(() => {
+    //   return dataStore.products
+    // })
+
+    return { dataStore }
   }
 }
 </script>

@@ -123,6 +123,10 @@ const routes = [
     path: '/news/:id/detail-news',
     name: 'detail-news',
     component: () => import('../views/detail-news.vue')
+  },
+  {
+    path: '/:notFound(.*)',
+    component: () => import('../views/not-found.vue')
   }
 ]
 
