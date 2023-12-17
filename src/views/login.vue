@@ -1,6 +1,6 @@
 <template>
-  <navbar/>
-  <div class="px-4 lg:px-28 mb-6 bg-textPrimary">
+  <navbar />
+  <div class="px-4 lg:px-28 pb-6 bg-textPrimary">
     <div class="grid grid-cols-12 items-center">
       <div class="col-span-12 mr-0 lg:mr-6 lg:col-span-4">
         <h1 class="text-xl font-bold text-center">Selamat Datang kembali!</h1>
@@ -42,9 +42,11 @@
               v-model="password"
             />
           </div>
-          <button class="hover:btn-hover btn-primary w-full py-2 rounded-2xl" @click="handleLogin">MASUK</button>
+          <button class="hover:btn-hover btn-primary w-full py-2 rounded-2xl" @click="handleLogin">
+            MASUK
+          </button>
           <button
-          @click="userStore.loginWithGoogle"
+            @click="userStore.loginWithGoogle"
             class="hover:btn-google-hover btn-google-primary mt-3 text-black font-bold w-full py-2 rounded-2xl flex justify-center items-center"
           >
             <icons name="ic-google" width="20px" height="20px"></icons>
@@ -66,27 +68,26 @@
       />
     </div>
   </div>
-  <footerVue/>
+  <footerVue />
 </template>
 
 <script setup>
-import icons from '../components/icons.vue';
-import navbar from '../components/navbar.vue';
-import footerVue from '../components/footer.vue';
-import { ref } from 'vue';
+import icons from '../components/icons.vue'
+import navbar from '../components/navbar.vue'
+import footerVue from '../components/footer.vue'
+import { ref } from 'vue'
 
-import { useUserStore } from '../stores/user';
+import { useUserStore } from '../stores/user'
 
 const email = ref('')
 const password = ref('')
 
-const userStore = useUserStore();
+const userStore = useUserStore()
 
-
-const handleLogin = async ()=> {
-  if(email.value && password.value){
+const handleLogin = async () => {
+  if (email.value && password.value) {
     await userStore.loginUser(email.value, password.value)
-  }else{
+  } else {
     alert('check form again')
   }
 }

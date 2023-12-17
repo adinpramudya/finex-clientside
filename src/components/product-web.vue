@@ -8,11 +8,11 @@
             {{ dataProduct.desc }}
           </p>
         </div>
-        <img :src="`../..${dataProduct.imgUrl}`" class="h-[308px] col-span-4 ml-auto" alt="gold" />
+        <img :src="dataProduct?.attachment?.url" class="h-[308px] col-span-4 ml-auto" alt="gold" />
       </div>
     </div>
     <div class="px-[118px] mt-32">
-      <TableProduct :futureContracts="dataProduct.futuresContracts" />
+      <TableProduct :futureContracts="dataProduct.FuturesContract" />
     </div>
   </div>
 </template>

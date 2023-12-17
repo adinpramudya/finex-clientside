@@ -7,12 +7,13 @@
   </div>
 </template>
 <script>
-import products from '../assets/data/product.json'
 import FooterVue from '@/components/footer.vue'
 import Navbar from '@/components/navbar.vue'
 import ProductMobile from '@/components/product-mobile.vue'
 import ProductWeb from '@/components/product-web.vue'
 import router from '../router/index'
+import { useDataStore } from '../stores/data'
+import { computed, onMounted } from 'vue'
 export default {
   components: {
     Navbar,
@@ -20,17 +21,23 @@ export default {
     ProductWeb,
     ProductMobile
   },
-  data: () => ({
-    product: {}
-  }),
+  data: () => ({}),
 
-  updated(){
-    this.product = products.find((e) => e.name.toLowerCase() == this.$route.params.name)
-  },
+  // updated(){
+  //   this.product = products.find((e) => e.name.toLowerCase() == this.$route.params.name)
+  // },
   mounted() {
-    this.product = products.find((e) => e.name.toLowerCase() == this.$route.params.name)
+    this.dataStore.retrieveAllProduct(this.$route.params.id)
+  },
+
+  setup(context) {
+    const dataStore = useDataStore()
+
+    const product = computed(() => {
+      return dataStore.products
+    })
+
+    return { dataStore, product }
   }
-
-
 }
 </script>

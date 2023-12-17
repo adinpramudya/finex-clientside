@@ -9,9 +9,9 @@
   }
 }
 
-html {
+/* html {
   font-family: 'figtree';
-}
+} */
 
 .swiper {
   @apply w-full h-full;

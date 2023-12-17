@@ -22,7 +22,7 @@
             melalui browser ataupun diunduh dari Play Store/App Store.
           </p>
         </div>
-        <button class="btn-primary w-full py-2 mt-5">Klik Disini</button>
+        <button class="btn-primary w-full py-2 mt-5 hover:btn-hover">Klik Disini</button>
       </div>
     </div>
     <div class="lg:w-1/2">

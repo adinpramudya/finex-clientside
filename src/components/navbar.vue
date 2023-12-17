@@ -40,7 +40,7 @@
             <router-link
               to="/"
               href="#home"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold"
+              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Beranda</router-link
             >
           </li>
@@ -48,7 +48,7 @@
             <div
               @click="showProduct"
               href="#portfolio"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] cursor-pointer mr-0 flex py-2 text-base text-slate-700 font-bold items-center"
+              class="lg:mr-[40px] lg:ml-0 ml-[40px] cursor-pointer mr-0 flex py-2 text-base text-slate-700 font-bold items-center hover:underline"
             >
               Produk<icons name="ic-arrow-down" width="14" height="7" class="ml-2"></icons>
             </div>
@@ -56,18 +56,12 @@
               class="absolute z-20 bg-textPrimary px-10 py-5 shadow-custom"
               :class="isShowProduct ? 'block' : 'hidden'"
             >
-              <ul>
-                <li class="text-base mb-2 text-slate-700 font-bold" @click="toProduct('emas')">
-                  Emas
-                </li>
-                <li class="text-base mb-2 text-slate-700 font-bold" @click="toProduct('kopi')">
-                  Kopi
-                </li>
-                <li class="text-base mb-2 text-slate-700 font-bold" @click="toProduct('olein')">
-                  Olein
-                </li>
-                <li class="text-base mb-2 text-slate-700 font-bold" @click="toProduct('kakao')">
-                  Kakao
+              <ul v-for="(product, index) in products" :key="index">
+                <li
+                  class="text-base mb-2 text-slate-700 font-bold cursor-pointer"
+                  @click="toProduct(product.id)"
+                >
+                  {{ product.name }}
                 </li>
               </ul>
             </div>
@@ -76,22 +70,21 @@
             <router-link
               to="/news"
               href="#experience"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold"
+              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Berita</router-link
             >
           </li>
           <li class="group">
             <router-link
               to="/gallery"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold"
+              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Galeri</router-link
             >
           </li>
           <li class="group">
             <router-link
-              to="/kontak"
-              href="#certificate"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold"
+              to="/contact"
+              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Kontak</router-link
             >
           </li>
@@ -133,6 +126,7 @@
 import { RouterLink } from 'vue-router'
 import icons from './icons.vue'
 import { useUserStore } from '../stores/user'
+import { useDataStore } from '../stores/data'
 import { onMounted } from 'vue'
 import { computed } from '@vue/reactivity'
 import router from '../router'
@@ -146,6 +140,7 @@ export default {
   components: {
     icons
   },
+
   data() {
     return {
       isShowHamburger: false,
@@ -153,6 +148,7 @@ export default {
       isShowDropdown: false
     }
   },
+
   methods: {
     hamburger() {
       this.isShowHamburger = !this.isShowHamburger
@@ -166,8 +162,8 @@ export default {
     showProduct() {
       this.isShowProduct = !this.isShowProduct
     },
-    toProduct(name) {
-      router.push({ name: 'product', params: { name: name } })
+    toProduct(id) {
+      router.push({ name: 'product', params: { id: id } })
     },
     openDashboard() {
       router.push({ name: 'dashboard' })
@@ -177,12 +173,20 @@ export default {
     const userStore = useUserStore()
     onMounted(() => {
       userStore.currentUser()
+      dataStore.retrieveAllProduct()
     })
+
     const user = computed(() => {
       return userStore.userData
     })
 
-    return { user, userStore }
+    const dataStore = useDataStore()
+    const products = computed(() => {
+      return dataStore.products
+    })
+    console.log('proo', products)
+
+    return { user, userStore, products }
   }
 }
 </script>

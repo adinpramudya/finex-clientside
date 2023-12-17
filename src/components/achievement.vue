@@ -1,7 +1,7 @@
 <template>
   <div class="mb-56">
     <img src="../assets/images/Union.png" alt="bg" class="lg:hidden w-full h-[1280px]" />
-    <img src="../assets/images/bg-desk.png" alt="bg" class="hidden lg:block w-full h-[700px]" />
+    <img src="../assets/images/bg-desk (2).png" alt="bg" class="hidden lg:block w-full h-[700px]" />
     <div class="pt-[80px] -mt-[1300px] lg:flex lg:-mt-[730px] lg:px-[118px] lg:justify-between">
       <div class="pt-[40px] px-4">
         <div class="mt[17px] flex-col justify-center lg:w-[393px]">

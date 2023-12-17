@@ -1,8 +1,11 @@
 <template>
   <div class="bg-textPrimary">
     <navbar />
+    <fwb-toast v-if="isSend" class="fixed right-0" closable type="success">
+      Send Message successfully.
+    </fwb-toast>
     <div class="px-8 lg:px-28 mb-6">
-      <img src="../assets/images/news.png" alt="maps" class="lg:w-full" />
+      <img src="../assets/images/maps.png" alt="maps" class="lg:w-full" />
       <h1 class="text-sm text-woodsmkoke my-4 lg:text-base">
         Kami percaya dari kekuatan komunikasi sederhana
       </h1>
@@ -16,6 +19,7 @@
               id="nama"
               type="text"
               placeholder="nama"
+              v-model="nama"
             />
           </div>
           <div class="mb-6">
@@ -25,17 +29,25 @@
               id="email"
               type="email"
               placeholder="email"
+              v-model="email"
+              @input="checkValidEmail"
             />
+            <small class="text-sm text-red-600" v-if="!isValidEmail && email.length > 0"
+              >e-mail tidak valid</small
+            >
           </div>
           <div class="mb-6">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="pesan"> Pesan </label>
             <textarea
+              v-model="pesan"
               rows="5"
               class="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             ></textarea>
           </div>
           <button
-            class="bg-woodsmkoke text-white w-full py-3 rounded-2xl transition-all ease-in-out duration-500"
+            class="bg-woodsmkoke text-white w-full py-3 rounded-2xl transition-all ease-in-out duration-500 hover:bg-mahogany"
+            @click="sendMessage"
+            :disabled="!email && !nama && !pesan && !isValidEmail && isSend"
           >
             KIRIM PESAN
           </button>
@@ -48,8 +60,7 @@
               alt="location"
             />
             <p class="text-sm col-span-10">
-              SoHo Pancoran Tower Splendor Lt. 30 Unit 3005 Jl. Letjen. MT. Haryono Kav. 2-3 Tebet
-              Jakarta Selatan 12810
+              {{ contact?.address }}
             </p>
           </div>
           <div class="grid grid-cols-12 mt-6">
@@ -58,7 +69,7 @@
               class="col-span-2 w-[25px]"
               alt="telephone"
             />
-            <p class="text-sm col-span-10">+62 21 5010 1569</p>
+            <p class="text-sm col-span-10">{{ contact?.telephone }}</p>
           </div>
           <div class="grid grid-cols-12 mt-6">
             <img
@@ -66,7 +77,7 @@
               class="col-span-2 w-[25px]"
               alt="faksimili"
             />
-            <p class="text-sm col-span-10">+62 21 5010 1569</p>
+            <p class="text-sm col-span-10">{{ contact?.fax }}</p>
           </div>
           <div class="grid grid-cols-12 mt-6">
             <img
@@ -74,7 +85,7 @@
               class="col-span-2 w-[25px]"
               alt="whatsapp"
             />
-            <p class="text-sm col-span-10">+62 811 8105 688 (Chat)</p>
+            <p class="text-sm col-span-10">{{ contact?.whatsApp }} (Chat)</p>
           </div>
           <div class="grid grid-cols-12 mt-6">
             <img
@@ -82,7 +93,7 @@
               class="col-span-2 w-[25px]"
               alt="whatsapp"
             />
-            <p class="text-sm col-span-10">customer@finex.co.id</p>
+            <p class="text-sm col-span-10">{{ contact?.email }}</p>
           </div>
         </div>
       </div>
@@ -95,13 +106,76 @@
 import icons from '@/components/icons.vue'
 import footerVue from '@/components/footer.vue'
 import navbar from '@/components/navbar.vue'
-import { useAuthStore } from '@/stores/authStore'
+import axios from 'axios'
+import { toast } from 'vue3-toastify'
+import { useDataStore } from '../stores/data'
+import { useToast } from 'vue-toastification'
+import { FwbToast } from 'flowbite-vue'
 
 export default {
   components: {
     icons,
     footerVue,
-    navbar
+    navbar,
+    FwbToast
+  },
+  data() {
+    return {
+      nama: '',
+      email: '',
+      pesan: '',
+      isValidEmail: false,
+      isSend: false
+    }
+  },
+
+  mounted() {
+    this.dataStore.retrieveContact()
+  },
+  computed: {
+    contact() {
+      return this.dataStore.contact
+    },
+    checkValidEmail() {
+      if (this.emailRegex.test(this.email)) {
+        this.isValidEmail = true
+      } else {
+        this.isValidEmail = false
+      }
+    }
+  },
+
+  methods: {
+    async sendMessage() {
+      if (this.nama && this.email && this.pesan) {
+        let body = {
+          name: this.nama,
+          email: this.email,
+          message: this.pesan
+        }
+        await axios
+          .post('https://api.finexkomoditi.id/v1/contact-form', body)
+          .then((res) => {
+            this.email = ''
+            this.pesan = ''
+            this.nama = ''
+            this.isSend = true
+            setTimeout(() => {
+              this.isSend = false
+            }, 5000)
+          })
+          .catch((err) => {
+            console.log('error', err)
+          })
+      }
+    }
+  },
+  setup() {
+    const dataStore = useDataStore()
+    const toast = useToast()
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    return { dataStore, emailRegex, toast }
   }
 }
 </script>

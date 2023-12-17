@@ -6,7 +6,7 @@
           <h1 class="text-base lg:text-2xl font-extrabold mb-1">Hubungi</h1>
           <h1 class="text-base lg:text-2xl font-extrabold flex items-center">
             <img src="../assets/images/ic-whatsapp.svg" class="w-4 lg:w-8" alt="whatsapp" />
-            <span class="text-xs lg:text-base">+62 811 8105 688 (Chat)</span>
+            <span class="text-xs lg:text-base">{{ contact?.whatsApp }} (Chat)</span>
           </h1>
         </div>
         <div class="flex flex-col">
@@ -23,10 +23,14 @@
       <div class="flex justify-between lg:w-1/3 pt-3 lg:pt-0">
         <div>
           <h1 class="font-bold">Produk Kami</h1>
-          <p class="mt-3">Emas</p>
-          <p class="mt-3">Kakao</p>
-          <p class="mt-3">Olein</p>
-          <p class="mt-3">Kopi</p>
+          <p
+            class="mt-3"
+            v-for="(data, index) in products"
+            :key="index"
+            @click="toProduct(data.id)"
+          >
+            {{ data.name }}
+          </p>
         </div>
         <div>
           <h1 class="font-bold">Hubungi Kami</h1>
@@ -36,20 +40,56 @@
       <div class="lg:w-1/2 mt-5">
         <h1 class="font-bold text-base">Disclaimer:</h1>
         <p class="text-xs lg:text-base">
-          Transaksi kontrak mempunyai risiko kemungkinan kerugian yang tidak terbatas, maka
-          berhati-hatilah terhadap pernyataan bahwa anda pasti mendapatkan keuntungan besar dari
-          perdagangan kontrak berjangka. Materi ini disajikan hanya untuk kepentingan sosialisasi
-          dan edukasi, tidak bermaksud mempengaruhi atau membujuk atau mengarahkan untuk
-          berinvestasi. Keputusan apapun yang diambil para pengguna website ini adalah
-          tanggung-jawab masing-masing pihak yang memutuskan atas kepentingannya sendiri.
+          {{ contact?.disclaimer }}
         </p>
       </div>
     </div>
 
     <div class="pt-4 px-4 lg:px-28 pb-4">
       <p class="text-[10px]">SoHo Pancoran Tower Splendor Lt. 30 Unit 3005</p>
-      <p class="text-[10px] pt-2">Jl. Letjen. MT. Haryono Kav. 2-3 Tebet Jakarta Selatan 12810</p>
+      <p class="text-[10px] pt-2">{{ contact?.address }}</p>
       <p class="text-[10px] text-right pt-2">© 2023 Finex. All rights reserved</p>
     </div>
   </div>
 </template>
+
+<script>
+import { useDataStore } from '../stores/data'
+import { computed, onMounted } from 'vue'
+import router from '../router'
+
+export default {
+  created() {
+    this.dataStore.retrieveContact()
+  },
+  computed: {
+    products() {
+      return this.dataStore.products
+    },
+    contact() {
+      return this.dataStore.contact
+    }
+  },
+
+  methods: {
+    toProduct(id) {
+      router.push({ name: 'product', params: { id: id } })
+    }
+  },
+  setup() {
+    const dataStore = useDataStore()
+
+    // const products = computed(() => {
+    //   return dataStore.products
+    // })
+    // const contact = computed(() => {
+    //   return dataStore.contact
+    // })
+
+    const toProduct = (id) => {
+      router.push({ name: 'product', params: { id: id } })
+    }
+    return { dataStore }
+  }
+}
+</script>

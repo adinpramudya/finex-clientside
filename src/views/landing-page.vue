@@ -19,7 +19,8 @@ import productCmp from '@/components/product-cmp.vue'
 import recommendation from '@/components/recommendation.vue'
 import regulasi from '@/components/regulasi.vue'
 import whyChooseUs from '@/components/why-choose-us.vue'
-import { useUserStore } from '../stores/user'
 
-
+import { computed, onMounted } from 'vue'
+import { useDataStore } from '../stores/data'
+const dataStore = useDataStore()
 </script>

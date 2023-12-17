@@ -100,9 +100,29 @@ const routes = [
     beforeEnter: requireAuth
   },
   {
-    path: '/product/:name',
+    path: '/product/:id',
     name: 'product',
     component: () => import('../views/product.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/kontak.vue')
+  },
+  {
+    path: '/gallery',
+    name: 'gallery',
+    component: () => import('../views/gallery.vue')
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: () => import('../views/news.vue')
+  },
+  {
+    path: '/news/detail-news',
+    name: 'detail-news',
+    component: () => import('../views/detail-news.vue')
   }
 ]
 

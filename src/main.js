@@ -7,11 +7,13 @@ import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } 
 import App from './App.vue'
 import router from './router'
 import { useUserStore } from './stores/user'
+import Toast from 'vue-toastification'
 const auth = getAuth()
 setPersistence(auth, browserLocalPersistence)
 const app = createApp(App)
 
 app.use(createPinia())
+app.use(Toast)
 app.use(router)
 
 // const userStore = useUserStore()
