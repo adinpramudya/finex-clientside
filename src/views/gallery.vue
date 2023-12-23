@@ -64,7 +64,7 @@
   margin-bottom: 0px;
 }
 .vueperslides {
-  z-index: -1;
+  z-index: 0;
 }
 </style>
 

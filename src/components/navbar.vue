@@ -30,7 +30,7 @@
       <nav
         id="nav-menu"
         :class="isShowHamburger ? 'block' : 'hidden'"
-        class="absolute right-0 top-14 w-full max-w-[250px] transition-all duration-500 ease-in-out border-lemonChiffon rounded-lg py-5 bg-textPrimary shadow-xl lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
+        class="absolute z-20 right-0 top-14 w-full max-w-[250px] transition-all duration-500 ease-in-out border-lemonChiffon rounded-lg py-5 bg-textPrimary shadow-xl lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
       >
         <ul class="block lg:flex">
           <li class="group">

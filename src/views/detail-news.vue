@@ -51,7 +51,7 @@ export default {
   },
   computed: {
     post() {
-      return this.dataStore.posts.find((e) => e.id == this.$route.params.id)
+      return this.dataStore.posts
     }
   },
   setup() {
