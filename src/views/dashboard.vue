@@ -111,6 +111,7 @@
         <div class="grid grid-cols-12 mt-10" v-if="menu == 'dashboard'">
           <a
             href="https://bit.ly/Deposit-Finex"
+            target="_blank"
             class="block w-full col-span-12 mr-0 lg:pr-6 lg:col-span-6"
           >
             <div
@@ -125,7 +126,11 @@
               </div>
             </div>
           </a>
-          <a href="https://bit.ly/Deposit-Finex" class="block w-full col-span-12 lg:col-span-6">
+          <a
+            target="_blank"
+            href="https://bit.ly/Deposit-Finex"
+            class="block w-full col-span-12 lg:col-span-6"
+          >
             <div class="rounded-xl shadow-xl border-2 relative hover:bg-[#F0E68C]">
               <icons name="ic_withdrawl" width="165" class="ml-auto"></icons>
               <div
