@@ -34,6 +34,10 @@ export default {
   },
   computed: {
     product() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional: for smooth scrolling
+      })
       return this.dataStore.products.find((e) => e.id == this.$route.params.id)
       // console.log('prams', this.$route.params.id)
     }

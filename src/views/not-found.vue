@@ -1,12 +1,16 @@
 <template>
-  <div class="bg-textPrimary lg:px-52 w-fit lg:w-full py-20 lg:flex lg:justify-between">
-    <img src="../assets/images/404.png" alt="404" class="lg:w-[500px] mb-4 lg:mb-0" />
+  <div class="bg-textPrimary lg:px-52 w-fit lg:w-full py-20 lg:flex lg:justify-between h-screen">
+    <img
+      src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703350512/Attachments/uaupuw395o93amfvigqh.png"
+      alt="404"
+      class="lg:w-[600px] mb-4 lg:mb-0"
+    />
     <div class="lg: w-[400px]">
-      <div class="py-6 px-14 rounded-xl" style="background-color: rgba(255, 201, 60, 0.5)">
+      <div class="py-6 px-14 rounded-xl mx-4" style="background-color: rgba(255, 201, 60, 0.5)">
         <p class="text-md">HALAMAN TIDAK DITEMUKAN</p>
       </div>
-      <p class="font-bold text-[48px] mt-10 lg:mt-0">Oh tidak! Error 404</p>
-      <p class="font-medium text-lg">
+      <p class="font-bold text-[48px] px-4 mt-10 lg:mt-0">Oh tidak! Error 404</p>
+      <p class="font-medium text-lg px-4">
         Mungkin halaman dalam keadaan diperbaiki, kami tidak dapat menemukan apa yang anda cari.
       </p>
       <div

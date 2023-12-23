@@ -24,11 +24,17 @@
             melalui browser ataupun diunduh dari Play Store/App Store.
           </p>
         </div>
-        <button class="btn-primary w-full py-2 mt-5 hover:btn-hover">Klik Disini</button>
+        <a href="https://jafetsnow.jfx.co.id/#/login" target="_blank">
+          <button class="btn-primary w-full py-2 mt-5 hover:btn-hover">Klik Disini</button>
+        </a>
       </div>
     </div>
     <div class="lg:w-1/2">
-      <img src="../assets/images/platform-jafets 1.png" alt="jafets" class="mx-auto lg:w-[531px]" />
+      <img
+        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348433/Attachments/u2ej63cq5ldmxzmsssee.png"
+        alt="jafets"
+        class="mx-auto lg:w-[531px]"
+      />
     </div>
   </div>
 </template>

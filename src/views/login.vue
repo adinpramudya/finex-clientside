@@ -62,7 +62,7 @@
         </div>
       </div>
       <img
-        src="../assets/images/login.png"
+        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805218/Attachments/ne28px8q4idndkocorgm.png"
         alt="login"
         class="w-[248px] lg:w-[554px] lg:ml-auto ml-0 lg:justify-center mt-12 col-span-12 mr-0 lg:mr-6 lg:col-span-8"
       />

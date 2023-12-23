@@ -6,6 +6,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  sendEmailVerification,
   updateProfile
 } from 'firebase/auth'
 import { auth } from '../firebaseConfig'
@@ -17,7 +18,8 @@ export const useUserStore = defineStore('userStore', {
     userData: null,
     loadingUser: false,
     loadingSession: false,
-    isLoggedIn: false
+    isLoggedIn: false,
+    errorAuth: ''
   }),
   actions: {
     setUser(user) {
@@ -33,25 +35,45 @@ export const useUserStore = defineStore('userStore', {
         await updateProfile(user, {
           displayName: fullname
         })
-        this.setLoggedIn(true)
 
-        await this.setUser(user)
-        router.push('/')
+        sendEmailVerification(auth.currentUser).then((res) => {
+          alert('Email Verification Link Sent')
+          router.push('/login')
+        })
+
+        // await this.setUser(user)
       } catch (error) {
         console.log(error)
       } finally {
         this.loadingUser = false
       }
     },
+    async updateData(name) {
+      this.loadingUser = true
+      const userNow = auth.currentUser
+      updateProfile({
+        displayName: name
+      })
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log('resss', err)
+        })
+    },
     async loginUser(email, password) {
       this.loadingUser = true
       try {
         const { user } = await signInWithEmailAndPassword(auth, email, password)
-        this.setLoggedIn(true)
-        this.setUser(user)
-        router.push('/')
+        console.log('logg', user)
+        if (user) {
+          this.setLoggedIn(true)
+          this.setUser(user)
+          router.push('/')
+        }
       } catch (error) {
-        console.log(error)
+        console.log(error.code)
+        // auth/email-already-in-use
       } finally {
         this.loadingUser = false
       }

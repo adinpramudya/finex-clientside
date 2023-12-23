@@ -9,7 +9,7 @@
       class="mySwiper"
     >
       <swiper-slide v-for="(data, index) in products" :key="index">
-        <div class="lg:max-w-6xl mx-10 lg:flex lg:mx-auto lg:items-stretch">
+        <div class="lg:max-w-6xl mx-10 lg:flex lg:mx-auto lg:items-stretch pb-10">
           <img
             :src="data.attachment?.url"
             :alt="data.name"
@@ -20,7 +20,7 @@
             <p class="line-clamp-2">{{ data.desc }}</p>
           </div>
           <p
-            class="mt-auto font-bold text-textDenim hidden lg:block cursor-pointer"
+            class="mt-auto font-bold text-textDenim pl-6 lg:block lg:pl-0 cursor-pointer"
             @click="toProduct(data.id)"
           >
             Selengkapnya
@@ -33,10 +33,7 @@
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import emas from '@/assets/images/product/Gold.png'
-import kopi from '@/assets/images/product/Kopi.png'
-import olein from '@/assets/images/product/Olein.png'
-import kakao from '@/assets/images/product/Kakao.png'
+
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'

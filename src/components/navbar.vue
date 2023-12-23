@@ -1,11 +1,8 @@
 <template>
   <div class="px-4 py-[18px] lg:px-[118px] bg-textPrimary flex items-center justify-between">
-    <router-link
-      to="/home
-    "
-    >
+    <router-link to="/">
       <img
-        src="../assets/images/FINEX Komoditi Black Green 1.png"
+        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348293/Attachments/q1wgbodsf8c9cmpapwum.png"
         class="w-[102px] lg:w-[188px]"
         alt="logo"
       />
@@ -174,6 +171,7 @@ export default {
     onMounted(() => {
       userStore.currentUser()
       dataStore.retrieveAllProduct()
+      console.log('user', user)
     })
 
     const user = computed(() => {

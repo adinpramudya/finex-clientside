@@ -12,6 +12,9 @@
         harga.
       </p>
     </div>
-    <img src="../assets/images/banner.png" alt="banner" />
+    <img
+      src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805199/Attachments/nj1m97xvdarkkcxwgnxm.png"
+      alt="banner"
+    />
   </div>
 </template>

@@ -49,7 +49,7 @@
             {{ data.tradingDaysAndHours }}
           </td>
           <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
-            {{ data.minimumPriceChange ? formattedValue(data.minimumPriceChange) : '-' }}
+            {{ data.minimumPriceChange ? data.minimumPriceChange : '-' }}
           </td>
           <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.price }}

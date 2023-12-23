@@ -3,7 +3,7 @@
   <div class="px-4 lg:px-28 pb-6 bg-textPrimary">
     <div class="grid grid-cols-12 items-center">
       <img
-        src="../assets/images/register.png"
+        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805235/Attachments/itw7ebrkhsyakl2sstta.png"
         alt="register
         "
         class="w-[248px] lg:w-[554px] lg:ml-auto ml-0 lg:justify-center mt-12 col-span-12 mr-0 lg:mr-auto lg:col-span-8"
@@ -69,10 +69,10 @@
             <p v-if="!isSame" class="text-sm text-red-700 mt-2">Password doesn't match!</p>
           </div>
           <button class="hover:btn-hover btn-primary w-full py-2 rounded-2xl" @click="handleSubmit">
-            MASUK
+            DAFTAR
           </button>
-          <button 
-          @click="authStore.loginWithGoogle"
+          <button
+            @click="authStore.loginWithGoogle"
             class="hover:btn-google-hover btn-google-primary mt-3 text-black font-bold w-full py-2 rounded-2xl flex justify-center items-center"
           >
             <icons name="ic-google" width="20px" height="20px"></icons>
@@ -116,6 +116,6 @@ const handleSubmit = async () => {
   if (!email.value || password.value.length < 6) {
     return alert('fail')
   }
-  await authStore.registerUser(email.value, password.value,fullname.value)
+  await authStore.registerUser(email.value, password.value, fullname.value)
 }
 </script>

@@ -6,7 +6,7 @@
       <div class="pt-[40px] px-4">
         <div class="mt[17px] flex-col justify-center lg:w-[393px]">
           <img
-            src="../assets/images/achievement/achievement-1.png"
+            src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348334/Attachments/jyyjnykbjere3mji7f0n.png"
             class="w-[80px] mx-auto mb-7"
             alt="achievement"
           />
@@ -29,7 +29,7 @@
             broker yang paling tepat bagi Anda untuk melakukan perdagangan komoditi.
           </p>
           <img
-            src="../assets/images/achievement/achievement-3.png"
+            src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348384/Attachments/zrpxr1l4qd8u7yom9wc5.png"
             class="w-[89px] mx-auto mt-7 lg:mt-4"
             alt="achievement"
           />
@@ -43,7 +43,7 @@
             Perdagangan
           </p>
           <img
-            src="../assets/images/achievement/achievement-2.png"
+            src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348374/Attachments/ejvdehamdrfkwxtr1g06.png"
             class="w-[179px] lg:mr-auto lg:ml-0 ml-auto mt-7"
             alt="achievement"
           />

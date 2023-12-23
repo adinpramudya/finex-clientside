@@ -10,12 +10,28 @@
     </div>
     <div class="w-full mt-5 lg:mt-0 lg:w-1/2">
       <div class="flex justify-center">
-        <img src="../assets/images/cimb.png" alt="cimb" class="w-[150px] h-[150px]" />
-        <img src="../assets/images/mandiri.png" alt="mandiri" class="w-[150px] h-[150px]" />
+        <img
+          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703349133/Attachments/mivkuyruwncutpgy3iah.png"
+          alt="cimb"
+          class="w-[150px] h-[150px]"
+        />
+        <img
+          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703349142/Attachments/tj73sqihnmnhaftdnvqe.png"
+          alt="mandiri"
+          class="w-[150px] h-[150px]"
+        />
       </div>
       <div class="flex justify-end">
-        <img src="../assets/images/bni.png" alt="bni" class="w-[150px] h-[150px]" />
-        <img src="../assets/images/bca.png" alt="bca" class="w-[150px] h-[150px]" />
+        <img
+          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703349122/Attachments/jmh1rtzxmc2u83fmcvrl.png"
+          alt="bni"
+          class="w-[150px] h-[150px]"
+        />
+        <img
+          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703349111/Attachments/obdirjp5obqbhqyfvecy.png"
+          alt="bca"
+          class="w-[150px] h-[150px]"
+        />
       </div>
     </div>
   </div>

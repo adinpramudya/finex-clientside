@@ -90,15 +90,14 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/login.vue'),
-    beforeEnter: requireAuth
+    component: () => import('../views/login.vue')
   },
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: () => import('../views/dashboard.vue'),
-    beforeEnter: requireAuth
+    component: () => import('../views/dashboard.vue')
   },
+
   {
     path: '/product/:id',
     name: 'product',
@@ -120,7 +119,7 @@ const routes = [
     component: () => import('../views/news.vue')
   },
   {
-    path: '/news/:id/detail-news',
+    path: '/news/detail-news/:id',
     name: 'detail-news',
     component: () => import('../views/detail-news.vue')
   },
@@ -128,6 +127,10 @@ const routes = [
     path: '/:notFound(.*)',
     component: () => import('../views/not-found.vue')
   }
+  // {
+  //   path: '/verification',
+  //   component: () => import('../views/verification.vue')
+  // }
 ]
 
 const router = createRouter({
