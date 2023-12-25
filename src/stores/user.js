@@ -174,7 +174,6 @@ export const useUserStore = defineStore('userStore', {
           localStorage.removeItem('user')
           localStorage.removeItem('token')
           localStorage.removeItem('tokenExpiration')
-          router.push('/login')
         } catch (error) {
           console.log(error)
         }
