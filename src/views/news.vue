@@ -35,7 +35,8 @@ onMounted(() => {
 const displayedItems = computed(() => {
   const startIndex = (currentPage.value - 1) * itemsPerPage.value
   const endIndex = startIndex + itemsPerPage.value
-  return dataStore.posts.slice(startIndex, endIndex)
+  console.log()
+  return dataStore && dataStore.posts && dataStore.posts.slice(startIndex, endIndex)
 })
 
 // console.log('postttt', posts)

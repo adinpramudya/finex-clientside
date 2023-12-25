@@ -5,6 +5,7 @@ export const useDataStore = defineStore('dataStore', {
   state: () => ({
     products: [],
     posts: [],
+    post: null,
     contact: null,
     galeries: [],
     isFetchingData: false
@@ -46,8 +47,21 @@ export const useDataStore = defineStore('dataStore', {
     },
     async retrieveAPosts(params = null) {
       this.isFetchingData = true
+
       await axios
-        .get(`${BASE_API}/posts?status=publish${params ? params : ''}`)
+        .get(`${BASE_API}/posts?status=publish${params ? `&id=${params}` : ''}`)
+        .then((res) => {
+          this.posts = res.data.data
+          console.log('post', this.post)
+        })
+        .catch((err) => {
+          console.log('error', err)
+        })
+    },
+    async retrieveAllPosts() {
+      this.isFetchingData = true
+      await axios
+        .get(`${BASE_API}/posts?status=publish`)
         .then(async (res) => {
           this.posts = await res.data.data
         })

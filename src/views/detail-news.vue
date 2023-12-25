@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     post() {
-      return this.dataStore.posts
+      return this.dataStore.posts[0]
     }
   },
   setup() {

@@ -109,6 +109,7 @@ export const useUserStore = defineStore('userStore', {
           localStorage.setItem('displayName', res.user.displayName)
           localStorage.setItem('token', token.accessToken)
           localStorage.setItem('tokenExpiration', token.expirationTime)
+          this.isLoggedIn = true
           router.push('/')
         }
       } catch (error) {
@@ -126,7 +127,7 @@ export const useUserStore = defineStore('userStore', {
         localStorage.removeItem('user')
         localStorage.removeItem('token')
         localStorage.removeItem('tokenExpiration')
-        router.push('/login')
+        router.push('/')
       } catch (error) {
         console.log(error)
       }
@@ -163,7 +164,10 @@ export const useUserStore = defineStore('userStore', {
     isAuthenticated() {
       const token = localStorage.getItem('token')
 
-      return !!token
+      console.log('token', token)
+      console.log('login', this.isLoggedIn)
+
+      return !!token || this.isLoggedIn
     },
     async autoLogout() {
       if (this.isTokenExpired) {
