@@ -9,8 +9,13 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import router from '../router'
-
+import { useUserStore } from '../stores/user'
+const userStore = useUserStore()
+onMounted(() => {
+  userStore.updateEmail()
+})
 const handleLogin = () => {
   router.push('/login')
 }

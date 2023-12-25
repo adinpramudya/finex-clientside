@@ -27,9 +27,7 @@
     />
 
     <div class="px-4 mt-9 lg:px-28">
-      <p class="indent-8 text-justify">
-        {{ post.content }}
-      </p>
+      <p class="indent-8 text-justify" v-html="post.content"></p>
     </div>
   </div>
   <footerVue />

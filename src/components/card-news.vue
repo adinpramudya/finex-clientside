@@ -10,9 +10,7 @@
           <img :src="data.attachment?.url" :alt="data.title" />
           <h1 class="text-base font-bold mt-3">{{ data.title }}</h1>
           <p class="text-sm font-semibold mt-3">{{ formatDate(data.createdAt) }}</p>
-          <p class="text-sm text-justify mt-3 line-clamp-3">
-            {{ data.content }}
-          </p>
+          <p class="text-sm text-justify mt-3 line-clamp-3" v-html="data.content"></p>
 
           <button class="text-textDenim mt-3" @click="toDetailNews(data.id)">
             Lihat Selengkapnya ...

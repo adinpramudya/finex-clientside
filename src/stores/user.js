@@ -28,6 +28,20 @@ export const useUserStore = defineStore('userStore', {
     setLoggedIn(login) {
       this.isLoggedIn = login
     },
+    currentUser() {
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          this.setLoggedIn(true)
+          let userLogin = {
+            email: user.email,
+            uid: user.uid,
+            fullname: user.displayName,
+            token: user.accessToken
+          }
+          this.userData = userLogin
+        }
+      })
+    },
     async registerUser(email, password, fullname) {
       this.loadingUser = true
       try {
@@ -48,6 +62,24 @@ export const useUserStore = defineStore('userStore', {
         this.loadingUser = false
       }
     },
+    async updateEmail() {
+      const data = localStorage.getItem('user')
+      const user = data ? JSON.parse(data) : null
+      // const userNow = await auth
+      await updateProfile(user.uid, {
+        email: user.email,
+        phoneNumber: null,
+        emailVerified: true,
+        displayName: user.fullname
+      })
+        .then((res) => {
+          console.log('RES', res)
+        })
+        .catch((err) => {
+          console.log('err', err)
+        })
+    },
+
     async updateData(name) {
       this.loadingUser = true
       const userNow = auth.currentUser
@@ -64,15 +96,23 @@ export const useUserStore = defineStore('userStore', {
     async loginUser(email, password) {
       this.loadingUser = true
       try {
-        const { user } = await signInWithEmailAndPassword(auth, email, password)
-        console.log('logg', user)
-        if (user) {
-          this.setLoggedIn(true)
-          this.setUser(user)
+        const res = await signInWithEmailAndPassword(auth, email, password)
+        this.userData = {
+          email: res.user.email,
+          fullname: res.user.displayName,
+          uid: res.user.uid,
+          emailVerified: res.user.emailVerified
+        }
+        const token = res.user.stsTokenManager
+        if (res) {
+          localStorage.setItem('user', JSON.stringify(this.userData))
+          localStorage.setItem('displayName', res.user.displayName)
+          localStorage.setItem('token', token.accessToken)
+          localStorage.setItem('tokenExpiration', token.expirationTime)
           router.push('/')
         }
       } catch (error) {
-        console.log(error.code)
+        console.log(error)
         // auth/email-already-in-use
       } finally {
         this.loadingUser = false
@@ -83,25 +123,15 @@ export const useUserStore = defineStore('userStore', {
         await signOut(auth)
         this.userData = null
         this.setLoggedIn(false)
+        localStorage.removeItem('user')
+        localStorage.removeItem('token')
+        localStorage.removeItem('tokenExpiration')
         router.push('/login')
       } catch (error) {
         console.log(error)
       }
     },
-    currentUser() {
-      onAuthStateChanged(auth, async (user) => {
-        if (user) {
-          this.setLoggedIn(true)
-          let userLogin = {
-            email: user.email,
-            uid: user.uid,
-            fullname: user.displayName,
-            token: user.accessToken
-          }
-          this.setUser(userLogin)
-        }
-      })
-    },
+
     async loginWithGoogle() {
       const provider = new GoogleAuthProvider()
       await signInWithPopup(auth, provider)
@@ -120,8 +150,35 @@ export const useUserStore = defineStore('userStore', {
       console.log('state', state.userData)
       return state.userData
     },
-    isAuthenticated: (state) => {
-      return state.isLoggedIn // code to check if authenticated
+    isTokenExpired() {
+      const token = localStorage.getItem('token')
+      if (!token) {
+        return true // Token not set, consider it expired
+      }
+
+      const expirationTimestamp = +localStorage.getItem('tokenExpiration') * 1000 // Convert seconds to milliseconds
+
+      return Date.now() >= expirationTimestamp
+    },
+    isAuthenticated() {
+      const token = localStorage.getItem('token')
+
+      return !!token
+    },
+    async autoLogout() {
+      if (this.isTokenExpired) {
+        try {
+          await signOut(auth)
+          this.userData = null
+          this.setLoggedIn(false)
+          localStorage.removeItem('user')
+          localStorage.removeItem('token')
+          localStorage.removeItem('tokenExpiration')
+          router.push('/login')
+        } catch (error) {
+          console.log(error)
+        }
+      }
     }
   }
 })

@@ -1,8 +1,13 @@
 <template>
   <div class="bg-textPrimary">
-    {{ posts }}
     <navbar />
     <cardNews :news="displayedItems"></cardNews>
+    <h1
+      class="text-3xl text-gray-400 text-center font-bold mb-10"
+      v-if="displayedItems.length == 0"
+    >
+      BELUM ADA BERITA
+    </h1>
     <fwb-pagination
       class="flex justify-center py-8"
       :total-pages="totalPages"

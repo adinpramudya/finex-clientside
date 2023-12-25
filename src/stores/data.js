@@ -47,7 +47,7 @@ export const useDataStore = defineStore('dataStore', {
     async retrieveAPosts(params = null) {
       this.isFetchingData = true
       await axios
-        .get(`${BASE_API}/posts/${params ? params : ''}`)
+        .get(`${BASE_API}/posts?status=publish${params ? params : ''}`)
         .then(async (res) => {
           this.posts = await res.data.data
         })
