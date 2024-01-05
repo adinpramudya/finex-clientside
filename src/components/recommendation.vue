@@ -31,6 +31,7 @@
     </div>
     <div class="lg:w-1/2">
       <img
+        loading="lazy"
         src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348433/Attachments/u2ej63cq5ldmxzmsssee.png"
         alt="jafets"
         class="mx-auto lg:w-[531px]"

@@ -13,6 +13,7 @@
       </p>
     </div>
     <img
+      loading="lazy"
       src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805199/Attachments/nj1m97xvdarkkcxwgnxm.png"
       alt="banner"
     />

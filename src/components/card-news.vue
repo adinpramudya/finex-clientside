@@ -7,7 +7,7 @@
           :key="index"
           class="col-span-12 mb-10 lg:mb-0 lg:gap-4 lg:col-span-4"
         >
-          <img :src="data.attachment?.url" :alt="data.title" />
+          <img loading="lazy" :src="data.attachment?.url" :alt="data.title" />
           <h1 class="text-base font-bold mt-3">{{ data.title }}</h1>
           <p class="text-sm font-semibold mt-3">{{ formatDate(data.createdAt) }}</p>
           <p class="text-sm text-justify mt-3 line-clamp-3" v-html="data.content"></p>
