@@ -115,9 +115,7 @@ import icons from '@/components/icons.vue'
 import footerVue from '@/components/footer.vue'
 import navbar from '@/components/navbar.vue'
 import axios from 'axios'
-import { toast } from 'vue3-toastify'
 import { useDataStore } from '../stores/data'
-import { useToast } from 'vue-toastification'
 import { FwbToast } from 'flowbite-vue'
 
 export default {
@@ -180,10 +178,9 @@ export default {
   },
   setup() {
     const dataStore = useDataStore()
-    const toast = useToast()
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    return { dataStore, emailRegex, toast }
+    return { dataStore, emailRegex }
   }
 }
 </script>
