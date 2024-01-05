@@ -227,7 +227,7 @@ const isShowDropdown = ref(false)
 const menu = ref('dashboard')
 const userStore = useUserStore()
 const nama = ref('')
-const isModal = ref(false)
+let isModal = ref(false)
 
 onMounted(() => {
   userStore.currentUser()

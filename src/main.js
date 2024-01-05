@@ -12,7 +12,6 @@ setPersistence(auth, browserLocalPersistence)
 const app = createApp(App)
 
 app.use(createPinia())
-app.use(Toast)
 app.use(router)
 
 // const userStore = useUserStore()
