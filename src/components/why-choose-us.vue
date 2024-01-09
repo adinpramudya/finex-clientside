@@ -14,7 +14,7 @@
     </div>
     <div class="flex flex-col w-full my-12 lg:my-0 lg:w-1/3 lg:mx-12">
       <div class="flex items-center">
-        <icons name="security" width="45" height="45" class="mr-2"></icons>
+        <icons name="comfort" width="45" height="45" class="mr-2"></icons>
         <h1 class="font-bold m-0">Kenyamanan</h1>
       </div>
       <p class="mt-5 text-justify">
@@ -25,7 +25,7 @@
     </div>
     <div class="flex flex-col w-full lg:w-1/3">
       <div class="flex items-center">
-        <icons name="security" width="45" height="45" class="mr-2"></icons>
+        <icons name="easly" width="45" height="45" class="mr-2"></icons>
         <h1 class="font-bold m-0">Kemudahan</h1>
       </div>
       <p class="mt-5 text-justify">

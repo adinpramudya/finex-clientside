@@ -14,6 +14,7 @@
             >
           </h1>
         </div>
+        <div></div>
         <div class="flex flex-col">
           <h1 class="text-base lg:text-2xl font-extrabold mb-1">Ikuti Kami</h1>
           <div class="flex justify-between items-center">
@@ -45,10 +46,13 @@
         </div>
         <div>
           <h1 class="font-bold">Hubungi Kami</h1>
-          <p class="mt-3" @click="toKontak">Kontak</p>
+          <p class="mt-3 cursor-pointer" @click="toKontak">Kontak</p>
+          <div class="mt-3 hover:underline">
+            <a href="https://pengaduan.bappebti.go.id/" target="_blank">Link Pengaduan Nasabah</a>
+          </div>
         </div>
       </div>
-      <div class="lg:w-1/2 mt-5">
+      <div class="lg:w-1/2 lg:mt-0 mt-5">
         <h1 class="font-bold text-base">Disclaimer:</h1>
         <p class="text-xs lg:text-base">
           {{ contact?.disclaimer }}

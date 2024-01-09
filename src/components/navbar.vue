@@ -1,11 +1,7 @@
 <template>
   <div class="px-4 py-[18px] lg:px-[118px] bg-textPrimary flex items-center justify-between">
     <router-link to="/">
-      <img
-        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348293/Attachments/q1wgbodsf8c9cmpapwum.png"
-        class="w-[102px] lg:w-[188px]"
-        alt="logo"
-      />
+      <img src="../assets/images/finex-logo.svg" class="w-[102px] lg:w-[188px]" alt="logo" />
     </router-link>
     <div class="flex items-center px-4" v-if="show">
       <button
@@ -106,10 +102,27 @@
                 </div>
               </div>
             </div>
-            <router-link to="/login" class="lg:flex" v-else>
+            <!-- <router-link to="/login" class="lg:flex" v-else>
               <div class="flex items-center lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0" @click="login">
                 <icons name="ic-login" width="20" height="20"></icons>
                 <span class="font-bold ml-1">Sign In</span>
+              </div>
+            </router-link> -->
+            <router-link to="/login" class="lg:flex" v-else>
+              <div
+                class="flex items-center bg-[#edeff2] px-5 rounded-md lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
+                @click="login"
+              >
+                <!-- <icons name="ic-login" width="20" height="20"></icons> -->
+                <span class="font-medium">Masuk</span>
+              </div>
+            </router-link>
+            <router-link to="/register" class="lg:flex" v-if="!user">
+              <div
+                class="flex items-center bg-sunglow px-5 rounded-md lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
+              >
+                <!-- <icons name="ic-login" width="20" height="20"></icons> -->
+                <span class="font-medium">Buka Akun</span>
               </div>
             </router-link>
           </div>

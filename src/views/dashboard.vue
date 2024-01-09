@@ -128,7 +128,7 @@
           </a>
           <a
             target="_blank"
-            href="https://bit.ly/Deposit-Finex"
+            href="https://bit.ly/FormWD-Finex"
             class="block w-full col-span-12 lg:col-span-6"
           >
             <div class="rounded-xl shadow-xl border-2 relative hover:bg-[#F0E68C]">

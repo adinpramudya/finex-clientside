@@ -1,24 +1,12 @@
 <template>
   <div class="lg:pb-56 pb-32 bg-textPrimary">
-    <img
-      loading="lazy"
-      src="../assets/images/Union.png"
-      alt="bg"
-      class="lg:hidden w-full h-[1280px]"
-    />
-    <img
-      loading="lazy"
-      src="../assets/images/bg-desk (2).png"
-      alt="bg"
-      class="hidden lg:block w-full h-[700px]"
-    />
-    <div class="pt-[80px] -mt-[1300px] lg:flex lg:-mt-[730px] lg:px-[118px] lg:justify-between">
+    <div class="py-[80px] lg:flex lg:px-[118px] lg:justify-between bg-sunglow">
       <div class="pt-[40px] px-4">
         <div class="mt[17px] flex-col justify-center lg:w-[393px]">
           <img
             loading="lazy"
-            src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348334/Attachments/jyyjnykbjere3mji7f0n.png"
-            class="w-[80px] mx-auto mb-7"
+            src="../assets/images/best-broker.svg"
+            class="w-[200px] mx-auto mb-7"
             alt="achievement"
           />
           <h1 class="text-xl font-bold text-center">
