@@ -110,7 +110,7 @@
             </router-link> -->
             <router-link to="/login" class="lg:flex" v-else>
               <div
-                class="flex items-center bg-[#edeff2] px-5 rounded-md lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
+                class="flex items-center bg-[#edeff2] px-5 rounded-md lg:mr-[20px] my-3 lg:my-0 mb-4 lg:mb-0"
                 @click="login"
               >
                 <!-- <icons name="ic-login" width="20" height="20"></icons> -->

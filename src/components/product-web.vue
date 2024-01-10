@@ -1,7 +1,7 @@
 <template>
   <div class="mb-20">
-    <div class="pt-20 h-max bg-sunglow pb-20 rounded-b-[10rem]">
-      <div class="px-[118px] grid grid-cols-12">
+    <div class="pt-20 h-max mx-[118px] bg-sunglow pb-20 rounded-b-[10rem]">
+      <div class="grid grid-cols-12 px-[60px]">
         <div class="flex-col col-span-8">
           <h1 class="font-bold text-3xl">{{ dataProduct.name }}</h1>
           <p class="mt-4 text-base">

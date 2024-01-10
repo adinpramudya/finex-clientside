@@ -4,7 +4,7 @@
     <fwb-toast v-if="isSend" class="fixed right-0" closable type="success">
       Send Message successfully.
     </fwb-toast>
-    <div class="px-8 lg:px-28 pb-6">
+    <div class="px-8 lg:px-28 pb-6 mb-6">
       <iframe
         :src="contact?.gmapUrl"
         class="w-full"
@@ -14,10 +14,8 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-      <h1 class="text-sm text-woodsmkoke my-4 lg:text-base">
-        Kami percaya dari kekuatan komunikasi sederhana
-      </h1>
-      <div class="lg:flex">
+
+      <div class="lg:flex mt-16">
         <div class="bg-sunglow p-[26px] rounded-2xl w-full lg:w-2/5">
           <h1 class="font-bold mb-8 text-center text-woodsmkoke">Kirimkan pesan kepada kami</h1>
           <div class="mb-4">
@@ -137,6 +135,10 @@ export default {
 
   mounted() {
     this.dataStore.retrieveContact()
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: for smooth scrolling
+    })
   },
   computed: {
     contact() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 lg:px-[116px] py-[30px] bg-sunglow w-full lg:flex lg:justify-between">
+  <div class="px-4 lg:mx-[116px] rounded-lg py-[30px] bg-sunglow lg:flex lg:justify-between">
     <div class="flex flex-col w-full lg:w-1/3">
       <div class="flex items-center">
         <icons name="security" width="45" height="45" class="mr-2"></icons>
