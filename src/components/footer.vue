@@ -61,7 +61,6 @@
     </div>
 
     <div class="pt-4 px-4 lg:px-28 pb-4">
-      <p class="text-[10px]">SoHo Pancoran Tower Splendor Lt. 30 Unit 3005</p>
       <p class="text-[10px] pt-2">{{ contact?.address }}</p>
       <p class="text-[10px] text-right pt-2">© 2023 Finex. All rights reserved</p>
     </div>
