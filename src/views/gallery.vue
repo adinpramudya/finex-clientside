@@ -2,7 +2,11 @@
   <div>
     <navbar />
     <div class="lg:px-28 bg-textPrimary">
+      <h1 class="text-3xl text-gray-400 text-center font-bold my-10" v-if="galleries.length == 0">
+        BELUM ADA GALLERY
+      </h1>
       <vueper-slides
+        v-else
         ref="vueperslides1"
         :touchable="false"
         fade

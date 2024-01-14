@@ -58,7 +58,7 @@
             KIRIM PESAN
           </button>
         </div>
-        <div class="w-full lg:w-3/5 lg:ml-7 lg:flex-col lg:flex">
+        <div class="w-full lg:w-3/5 lg:ml-7 flex-col flex">
           <div class="flex mr-auto my-[28px] items-center">
             <img
               src="../assets/images/icons/location.png"

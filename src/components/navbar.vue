@@ -1,7 +1,7 @@
 <template>
   <div class="px-4 py-[18px] lg:px-40 bg-textPrimary flex items-center justify-between">
     <router-link to="/">
-      <img src="../assets/images/finex-logo.svg" class="w-[102px] lg:w-[188px]" alt="logo" />
+      <img src="../assets/images/Finex Komoditi.png" class="w-[102px] lg:w-[188px]" alt="logo" />
     </router-link>
     <div class="flex items-center px-4" v-if="show">
       <button
@@ -110,7 +110,7 @@
             </router-link> -->
             <router-link to="/login" class="lg:flex" v-else>
               <div
-                class="bg-[#edeff2] py-2 px-8 rounded-md w-fit lg:mr-[20px] my-3 lg:my-0 mb-4 lg:mb-0"
+                class="bg-[#edeff2] py-2 px-4 rounded-md lg:mr-[20px] my-3 lg:my-0 mb-4 lg:mb-0"
                 @click="login"
               >
                 <!-- <icons name="ic-login" width="20" height="20"></icons> -->
@@ -119,7 +119,7 @@
             </router-link>
             <router-link to="/register" class="lg:flex" v-if="!user">
               <div
-                class="flex items-center py-2 px-4 rounded-md w-fit bg-sunglow lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
+                class="flex items-center py-2 px-4 rounded-md bg-sunglow lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
               >
                 <!-- <icons name="ic-login" width="20" height="20"></icons> -->
                 <span class="font-medium">Buka Akun</span>

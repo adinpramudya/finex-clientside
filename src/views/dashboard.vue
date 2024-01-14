@@ -6,7 +6,7 @@
     <div :class="isSwipe ? 'w-1/5' : 'w-[76px]'" class="bg-[#2C3333] h-screen">
       <div :class="isSwipe ? 'p-5' : 'pt-5 lg:pl-5 pb-5 pl-3'" class="">
         <img
-          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805252/Attachments/gqy4em0wpsvr9di64o0d.png"
+          src="../assets/images/Finex Komoditi.png"
           alt="finex"
           v-if="isSwipe"
           class="w-[162px]"

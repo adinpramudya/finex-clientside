@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-woodsmkoke w-full text-white">
+  <div class="bg-woodsmkoke w-full text-white relative z-50">
     <div class="py-4 border-b-2 border-white">
       <div class="px-4 lg:px-28 flex justify-between">
         <div class="flex flex-col">
