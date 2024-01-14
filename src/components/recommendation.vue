@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="px-8 lg:px-[118px] pt-20 pb-10 lg:flex lg:justify-between lg:items-center bg-textPrimary"
-  >
+  <div class="px-8 lg:px-40 pt-20 pb-10 lg:flex lg:justify-between lg:items-center bg-textPrimary">
     <div class="flex-col mb-[50px] lg:mb-0 lg:w-1/2 w-full">
-      <div class="lg:w-[454px] w-full lg:mx-auto">
+      <div class="lg:w-[454px] w-full lg:mr-auto">
         <h1 class="font-bold text-base">Aplikasi JAFeTS NOW</h1>
         <div class="mt-10"></div>
         <div class="my-5 flex items-center">
@@ -34,7 +32,7 @@
         loading="lazy"
         src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348433/Attachments/u2ej63cq5ldmxzmsssee.png"
         alt="jafets"
-        class="mx-auto lg:w-[531px]"
+        class="ml-auto lg:w-[531px]"
       />
     </div>
   </div>

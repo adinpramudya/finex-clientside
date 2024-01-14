@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-textPrimary px-8 lg:px-28 py-10 lg:flex block lg:justify-between">
+  <div class="bg-textPrimary px-8 lg:px-40 py-10 lg:flex block lg:justify-between">
     <div class="lg:pr-[117px] w-full lg:w-1/2">
       <h2 class="font-bold">Bank Penyimpanan Margin</h2>
       <p>

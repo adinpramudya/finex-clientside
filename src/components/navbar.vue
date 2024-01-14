@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 py-[18px] lg:px-[118px] bg-textPrimary flex items-center justify-between">
+  <div class="px-4 py-[18px] lg:px-40 bg-textPrimary flex items-center justify-between">
     <router-link to="/">
       <img src="../assets/images/finex-logo.svg" class="w-[102px] lg:w-[188px]" alt="logo" />
     </router-link>
@@ -28,12 +28,12 @@
         :class="isShowHamburger ? 'block' : 'hidden'"
         class="absolute z-20 right-0 top-14 w-full max-w-[250px] transition-all duration-500 ease-in-out border-lemonChiffon rounded-lg py-5 bg-textPrimary shadow-xl lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
       >
-        <ul class="block lg:flex">
+        <ul class="block px-10 lg:flex">
           <li class="group">
             <router-link
               to="/"
               href="#home"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
+              class="lg:mr-[40px] lg:ml-0 mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Beranda</router-link
             >
           </li>
@@ -41,7 +41,7 @@
             <div
               @click="showProduct"
               href="#portfolio"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] cursor-pointer mr-0 flex py-2 text-base text-slate-700 font-bold items-center hover:underline"
+              class="lg:mr-[40px] lg:ml-0 cursor-pointer mr-0 flex py-2 text-base text-slate-700 font-bold items-center hover:underline"
             >
               Produk<icons name="ic-arrow-down" width="14" height="7" class="ml-2"></icons>
             </div>
@@ -63,26 +63,26 @@
             <router-link
               to="/news"
               href="#experience"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
+              class="lg:mr-[40px] lg:ml-0 mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Berita</router-link
             >
           </li>
           <li class="group">
             <router-link
               to="/gallery"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
+              class="lg:mr-[40px] lg:ml-0 mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Galeri</router-link
             >
           </li>
           <li class="group">
             <router-link
               to="/contact"
-              class="lg:mr-[40px] lg:ml-0 ml-[40px] mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
+              class="lg:mr-[40px] lg:ml-0 mr-0 flex py-2 text-base text-slate-700 font-bold hover:underline"
               >Kontak</router-link
             >
           </li>
 
-          <div class="lg:flex lg:border-l-2 lg:border-slate-900 lg:pl-8 lg:ml-0 ml-8">
+          <div class="lg:flex lg:border-l-2 lg:border-slate-900 lg:pl-8 lg:ml-0">
             <div class="lg:flex cursor-pointer relative ml-2 mt-2 lg:ml-0 lg:mt-0" v-if="user">
               <div class="flex items-center w-[150px]" @click="openDropdownAccount">
                 <p class="mr-4 font-bold truncate">{{ user.fullname }}</p>
@@ -110,7 +110,7 @@
             </router-link> -->
             <router-link to="/login" class="lg:flex" v-else>
               <div
-                class="flex items-center bg-[#edeff2] px-5 rounded-md lg:mr-[20px] my-3 lg:my-0 mb-4 lg:mb-0"
+                class="bg-[#edeff2] py-2 px-8 rounded-md w-fit lg:mr-[20px] my-3 lg:my-0 mb-4 lg:mb-0"
                 @click="login"
               >
                 <!-- <icons name="ic-login" width="20" height="20"></icons> -->
@@ -119,7 +119,7 @@
             </router-link>
             <router-link to="/register" class="lg:flex" v-if="!user">
               <div
-                class="flex items-center bg-sunglow px-5 rounded-md lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
+                class="flex items-center py-2 px-4 rounded-md w-fit bg-sunglow lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0"
               >
                 <!-- <icons name="ic-login" width="20" height="20"></icons> -->
                 <span class="font-medium">Buka Akun</span>

@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:px-[118px] bg-textPrimary">
+  <div class="lg:px-40 bg-textPrimary">
     <swiper
       :navigation="true"
       :modules="modules"

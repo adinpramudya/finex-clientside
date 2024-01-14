@@ -15,7 +15,7 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
 
-      <div class="lg:flex mt-16">
+      <div class="lg:flex mt-16 lg:items-center">
         <div class="bg-sunglow p-[26px] rounded-2xl w-full lg:w-2/5">
           <h1 class="font-bold mb-8 text-center text-woodsmkoke">Kirimkan pesan kepada kami</h1>
           <div class="mb-4">
@@ -58,48 +58,48 @@
             KIRIM PESAN
           </button>
         </div>
-        <div class="mt-7 w-full lg:w-3/5 lg:ml-7">
-          <div class="grid grid-cols-12 mt-6 items-center">
+        <div class="w-full lg:w-3/5 lg:ml-7 lg:flex-col lg:flex">
+          <div class="flex mr-auto my-[28px] items-center">
             <img
               src="../assets/images/icons/location.png"
-              class="col-span-2 ml-auto mr-4 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[40px]"
               alt="location"
             />
-            <p class="text-sm col-span-10">
+            <p class="text-base col-span-10">
               {{ contact?.address }}
             </p>
           </div>
-          <div class="grid grid-cols-12 mt-6">
+          <div class="flex mr-auto my-[28px] items-center">
             <img
               src="../assets/images/icons/telephone.png"
-              class="col-span-2 ml-auto mr-4 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[40px]"
               alt="telephone"
             />
-            <p class="text-sm col-span-10">{{ contact?.telephone }}</p>
+            <p class="text-base col-span-10">{{ contact?.telephone }}</p>
           </div>
-          <div class="grid grid-cols-12 mt-6">
+          <div class="flex mr-auto my-[28px] items-center">
             <img
               src="../assets/images/icons/faksimili.png"
-              class="col-span-2 ml-auto mr-4 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[40px]"
               alt="faksimili"
             />
-            <p class="text-sm col-span-10">{{ contact?.fax }}</p>
+            <p class="text-base col-span-10">{{ contact?.fax }}</p>
           </div>
-          <div class="grid grid-cols-12 mt-6">
+          <div class="flex mr-auto my-[28px] items-center">
             <img
               src="../assets/images/icons/whatsapp.png"
-              class="col-span-2 ml-auto mr-4 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[40px]"
               alt="whatsapp"
             />
-            <p class="text-sm col-span-10">{{ contact?.whatsApp }} (Chat)</p>
+            <p class="text-base col-span-10">{{ contact?.whatsApp }} (Chat)</p>
           </div>
-          <div class="grid grid-cols-12 mt-6">
+          <div class="flex mr-auto my-[28px] items-center">
             <img
               src="../assets/images/icons/email.png"
-              class="col-span-2 ml-auto mr-4 w-[25px]"
+              class="col-span-2 ml-auto mr-4 w-[40px]"
               alt="whatsapp"
             />
-            <p class="text-sm col-span-10">{{ contact?.email }}</p>
+            <p class="text-base col-span-10">{{ contact?.email }}</p>
           </div>
         </div>
       </div>

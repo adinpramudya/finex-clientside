@@ -1,6 +1,6 @@
 <template>
   <div class="lg:pb-56 pb-32 bg-textPrimary">
-    <div class="py-[80px] lg:flex lg:mx-[118px] lg:justify-between bg-sunglow rounded-lg">
+    <div class="py-[80px] px-12 lg:flex lg:mx-40 lg:justify-between bg-sunglow rounded-lg">
       <div class="lg:pt-[120px] px-4">
         <div class="mt[17px] flex-col justify-center lg:w-[393px]">
           <img

@@ -2,7 +2,7 @@
   <navbar />
   <div class="bg-textPrimary px-0 pt-4 pb-6 lg:px-0">
     <div
-      class="bg-sunglow pt-12 py-48 px-10 lg:mx-28 lg:rounded-tr-full lg:rounded-tl-[1200px] lg:rounded-bl-full lg:rounded-br-[1200px] rounded-tl-3xl rounded-tr-[200px] rounded-br-3xl rounded-bl-[200px]"
+      class="bg-sunglow pt-12 py-48 px-24 lg:mx-28 lg:rounded-tr-full lg:rounded-tl-[1200px] lg:rounded-bl-full lg:rounded-br-[1200px] rounded-tl-3xl rounded-tr-[200px] rounded-br-3xl rounded-bl-[200px]"
     >
       <div class="grid grid-cols-12">
         <div class="col-span-6">
