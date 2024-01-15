@@ -11,7 +11,7 @@
           v-if="isSwipe"
           class="w-[162px]"
         />
-        <img src="../assets/images/finex-logo-m.png" alt="finex" v-else class="w-[50px]" />
+        <img src="../assets/images/Finex Komoditi m.png" alt="finex" v-else class="w-[35px]" />
       </div>
       <div :class="isSwipe ? 'mx-5' : ''">
         <div
