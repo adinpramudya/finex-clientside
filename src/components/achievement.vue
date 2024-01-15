@@ -26,10 +26,10 @@
             class="w-[89px] mx-auto mt-7 lg:mt-4"
             alt="achievement"
           />
-          <h1 class="text-xl font-bold text-left">
+          <h1 class="text-xl font-bold text-center">
             Pialang dengan Volume Multilateral Terbanyak Tahun 2015
           </h1>
-          <p class="text-base text-left mt-2 font-medium">
+          <p class="text-base text-center mt-2 font-medium">
             Finex meraih penghargaan sebagai "Best Broker Indonesia 2021", menjadikan Finex sebagai
             broker yang paling tepat bagi Anda untuk melakukan perdagangan komoditi.
           </p>
@@ -39,12 +39,12 @@
         <img
           loading="lazy"
           src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348374/Attachments/ejvdehamdrfkwxtr1g06.png"
-          class="w-[179px] lg:mr-auto lg:ml-0 mx-auto mt-7"
+          class="w-[179px] mx-auto mt-7"
           alt="achievement"
         />
         <div class="mt[17px] flex-col justify-center">
-          <h1 class="text-xl font-bold text-left">Pialang Berjangka Terpatuh Tahun 2016</h1>
-          <p class="text-base text-left mt-2 font-medium">
+          <h1 class="text-xl font-bold text-center">Pialang Berjangka Terpatuh Tahun 2016</h1>
+          <p class="text-base text-center mt-2 font-medium">
             Penghargaan diberikan oleh Badan Pengawas Perdagangan Berjangka Komoditi Kementrian
             Perdagangan
           </p>

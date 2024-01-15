@@ -25,6 +25,33 @@
         <a href="https://jafetsnow.jfx.co.id/#/login" target="_blank">
           <button class="btn-primary w-full py-2 mt-5 hover:btn-hover">Klik Disini</button>
         </a>
+        <div class="flex justify-between">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.compass.jfxmobile&hl=en&gl=US"
+            target="_blank"
+          >
+            <button
+              class="btn-hover rounded-lg md:px-32 lg:px-8 lg:mr-0 mr-4 py-2 mt-5 mx-auto text-center"
+            >
+              <img
+                src="../assets/images/google-play.svg"
+                class="mx-auto"
+                alt="google-play"
+                width="150"
+              />
+            </button>
+          </a>
+          <a href="https://apps.apple.com/id/app/jafets-now/id1634520823" target="_blank">
+            <button class="btn-hover rounded-lg md:px-32 lg:px-8 py-2 mt-5 mx-auto text-center">
+              <img
+                src="../assets/images/app-store.svg"
+                class="mx-auto"
+                alt="app-store"
+                width="150"
+              />
+            </button>
+          </a>
+        </div>
       </div>
     </div>
     <div class="lg:w-1/2">
