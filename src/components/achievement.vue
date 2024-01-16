@@ -6,10 +6,10 @@
           <img
             loading="lazy"
             src="../assets/images/best-broker.svg"
-            class="w-[200px] mx-auto mb-7"
+            class="w-[250px] mx-auto mb-[100px] -mt-4"
             alt="achievement"
           />
-          <h1 class="text-xl font-bold text-center">
+          <h1 class="text-xl font-bold text-center mt-[86px]">
             Finex — Broker Komoditi Terbaik di Indonesia
           </h1>
           <p class="text-base text-center mt-2 font-medium">
@@ -26,7 +26,7 @@
             class="w-[89px] mx-auto mt-7 lg:mt-4"
             alt="achievement"
           />
-          <h1 class="text-xl font-bold text-center">
+          <h1 class="text-xl font-bold text-center mt-[76px]">
             Pialang dengan Volume Multilateral Terbanyak Tahun 2015
           </h1>
           <p class="text-base text-center mt-2 font-medium">
@@ -39,7 +39,7 @@
         <img
           loading="lazy"
           src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348374/Attachments/ejvdehamdrfkwxtr1g06.png"
-          class="w-[179px] mx-auto mt-7"
+          class="w-[179px] mx-auto -mt-6 mb-14"
           alt="achievement"
         />
         <div class="mt[17px] flex-col justify-center">
