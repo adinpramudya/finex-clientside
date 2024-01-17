@@ -1,7 +1,7 @@
 <template>
   <div class="px-8 lg:px-40 pt-20 pb-10 lg:flex lg:justify-center lg:items-center bg-textPrimary">
-    <div class="flex-col mb-[50px] lg:mb-0 lg:w-1/2 w-full">
-      <div class="lg:w-[800px] w-full lg:mr-auto">
+    <div class="flex-col mb-[50px] lg:mb-0 lg:w-1/2 w-full lg:mr-10">
+      <div class="w-full lg:mr-auto">
         <h1 class="font-bold text-base">Aplikasi JAFeTS NOW</h1>
         <div class="mt-10"></div>
         <div class="my-5 flex items-center">
@@ -23,15 +23,20 @@
           </p>
         </div>
         <a href="https://jafetsnow.jfx.co.id/#/login" target="_blank">
-          <button class="btn-primary w-full py-2 mt-5 hover:btn-hover">Klik Disini</button>
+          <button
+            class="btn-hover w-full rounded-lg md:px-32 lg:px-8 lg:mr-0 mr-4 py-2 mt-5 mx-auto text-center"
+          >
+            <img src="../assets/images/web.svg" class="mx-auto" alt="web" width="150" />
+          </button>
         </a>
-        <div class="flex justify-between">
+        <div class="flex gap-4 justify-between">
           <a
             href="https://play.google.com/store/apps/details?id=com.compass.jfxmobile&hl=en&gl=US"
             target="_blank"
+            class="w-full"
           >
             <button
-              class="btn-hover rounded-lg md:px-32 lg:px-8 lg:mr-0 mr-4 py-2 mt-5 mx-auto text-center"
+              class="btn-hover w-full rounded-lg md:px-32 lg:px-8 lg:mr-0 mr-4 py-2 mt-5 mx-auto text-center"
             >
               <img
                 src="../assets/images/google-play.svg"
@@ -41,8 +46,14 @@
               />
             </button>
           </a>
-          <a href="https://apps.apple.com/id/app/jafets-now/id1634520823" target="_blank">
-            <button class="btn-hover rounded-lg md:px-32 lg:px-8 py-2 mt-5 mx-auto text-center">
+          <a
+            class="w-full"
+            href="https://apps.apple.com/id/app/jafets-now/id1634520823"
+            target="_blank"
+          >
+            <button
+              class="w-full btn-hover rounded-lg md:px-32 lg:px-8 py-2 mt-5 mx-auto text-center"
+            >
               <img
                 src="../assets/images/app-store.svg"
                 class="mx-auto"
@@ -59,7 +70,7 @@
         loading="lazy"
         src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348433/Attachments/u2ej63cq5ldmxzmsssee.png"
         alt="jafets"
-        class="ml-auto lg:w-[560px]"
+        class="ml-auto lg:w-full"
       />
     </div>
   </div>

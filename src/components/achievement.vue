@@ -1,15 +1,15 @@
 <template>
   <div class="lg:pb-56 pb-32 bg-textPrimary">
-    <div class="py-[80px] px-12 lg:flex lg:mx-40 lg:justify-between bg-sunglow rounded-lg">
-      <div class="lg:pt-[120px] px-4">
-        <div class="mt[17px] flex-col justify-center lg:w-[393px]">
+    <div class="py-[80px] px-12 lg:flex lg:gap-2 lg:mx-40 lg:justify-between bg-sunglow rounded-lg">
+      <div class="lg:pt-[120px] px-4 w-full">
+        <div class="flex-col justify-center">
           <img
             loading="lazy"
             src="../assets/images/best-broker.svg"
-            class="w-[250px] mx-auto mb-[100px] -mt-4"
+            class="w-[250px] mx-auto lg:mb-[95px] mb-0 -mt-4"
             alt="achievement"
           />
-          <h1 class="text-xl font-bold text-center mt-[86px]">
+          <h1 class="text-xl font-bold text-center lg:mt-[86px] mt-10">
             Finex — Broker Komoditi Terbaik di Indonesia
           </h1>
           <p class="text-base text-center mt-2 font-medium">
@@ -18,15 +18,15 @@
           </p>
         </div>
       </div>
-      <div class="px-4 lg:w-[300px]">
-        <div class="mt[17px] flex-col justify-center">
+      <div class="px-4 w-full">
+        <div class="flex-col justify-center">
           <img
             loading="lazy"
             src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348384/Attachments/zrpxr1l4qd8u7yom9wc5.png"
-            class="w-[89px] mx-auto mt-7 lg:mt-4"
+            class="w-[100px] mx-auto mt-12 lg:mt-4"
             alt="achievement"
           />
-          <h1 class="text-xl font-bold text-center mt-[76px]">
+          <h1 class="text-xl font-bold text-center mt-6 lg:mt-[50px]">
             Pialang dengan Volume Multilateral Terbanyak Tahun 2015
           </h1>
           <p class="text-base text-center mt-2 font-medium">
@@ -35,14 +35,14 @@
           </p>
         </div>
       </div>
-      <div class="px-4 lg:w-[300px]">
+      <div class="px-4 w-full mt-[28px] lg:mt-0">
         <img
           loading="lazy"
           src="https://res.cloudinary.com/dycicfqk1/image/upload/v1703348374/Attachments/ejvdehamdrfkwxtr1g06.png"
-          class="w-[179px] mx-auto -mt-6 mb-14"
+          class="w-[179px] mx-auto mt-12 lg:-mt-4 lg:mb-10 mb-6"
           alt="achievement"
         />
-        <div class="mt[17px] flex-col justify-center">
+        <div class="flex-col justify-center">
           <h1 class="text-xl font-bold text-center">Pialang Berjangka Terpatuh Tahun 2016</h1>
           <p class="text-base text-center mt-2 font-medium">
             Penghargaan diberikan oleh Badan Pengawas Perdagangan Berjangka Komoditi Kementrian
