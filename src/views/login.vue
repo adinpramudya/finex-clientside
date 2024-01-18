@@ -2,7 +2,7 @@
   <navbar />
   <div class="px-4 lg:px-28 pb-6 bg-textPrimary">
     <div class="grid grid-cols-12 items-center">
-      <div class="col-span-12 mr-0 lg:mr-6 lg:col-span-4">
+      <div class="col-span-12 mr-0 lg:mr-6 lg:col-span-6">
         <h1 class="text-xl font-bold text-center">Selamat Datang kembali!</h1>
         <h1 class="text-sm font-semibold text-center mt-3">
           Masuk ke dalam finex komoditi dan raih profitmu
@@ -61,11 +61,13 @@
           </p>
         </div>
       </div>
-      <img
-        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805218/Attachments/ne28px8q4idndkocorgm.png"
-        alt="login"
-        class="w-[248px] lg:w-[554px] lg:ml-auto ml-0 lg:justify-center mt-12 col-span-12 mr-0 lg:mr-6 lg:col-span-8"
-      />
+      <div class="w-full col-span-12 lg:col-span-6">
+        <img
+          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805218/Attachments/ne28px8q4idndkocorgm.png"
+          alt="login"
+          class="w-full lg:w-full lg:h-[500px] lg:ml-auto ml-0 lg:justify-center mt-12 mr-0"
+        />
+      </div>
     </div>
   </div>
   <footerVue />

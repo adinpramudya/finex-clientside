@@ -1,14 +1,14 @@
 <template>
   <navbar />
   <div class="px-4 lg:px-28 pb-6 bg-textPrimary">
-    <div class="grid grid-cols-12 items-center">
+    <div class="grid grid-cols-12 items-center gap-10">
       <img
         src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805235/Attachments/itw7ebrkhsyakl2sstta.png"
         alt="register
         "
-        class="w-[248px] lg:w-[554px] lg:ml-auto ml-0 lg:justify-center mt-12 col-span-12 mr-0 lg:mr-auto lg:col-span-8"
+        class="w-[248px] lg:max-w-[800px] lg:w-full ml-0 lg:justify-center mt-12 col-span-12 mr-0 lg:col-span-6"
       />
-      <div class="col-span-12 mr-0 lg:mr-6 lg:col-span-4">
+      <div class="col-span-12 mr-0 lg:mr-6 lg:col-span-6">
         <h1 class="text-xl font-bold text-center">Pendaftaran</h1>
         <h1 class="text-sm font-semibold text-center mt-3">
           Daftar ke dalam finex komoditi dan raih profitmu
