@@ -29,7 +29,6 @@
               :contractUnit="data.contractUnit"
               :marginPerLotRemote="data.marginPerLotRemote"
               :marginPerLotSpot="data.marginPerLotSpot"
-              :marginPerLotNone="data.marginPerLotNone"
               :commissionPerSideLot="data.commissionPerSideLot"
               :tradingDaysAndHours="data.tradingDaysAndHours"
               :minimumPriceChange="data.minimumPriceChange"

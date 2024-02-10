@@ -8,7 +8,31 @@
   <bank />
   <regulasi />
   <footerVue />
+
+  <fwb-modal size="5xl" v-if="isShowModal" class="!bg-black" @close="closeModal">
+    <template #body>
+      <img src="../assets/images/modal.png" alt="modal" />
+      <a href="https://finex.co.id/" target="_blank" @click="closeModal">
+        <button
+          class="p-2 rounded-tl-3xl bg-[#fff] absolute right-0 bottom-0 lg:text-sm text-xs font-bold"
+        >
+          Lanjut ke website FINEX Komoditi
+        </button>
+      </a>
+      <!-- <div class="w-[944px] lg:h-[445px] md:h-[445px] h-[90px]"></div> -->
+    </template>
+  </fwb-modal>
 </template>
+<style>
+.bg-white {
+  background-color: #212b31;
+  background-image: url('../assets/images/modal.png');
+}
+button {
+  position: relative;
+  z-index: 10;
+}
+</style>
 <script setup>
 import achievement from '@/components/achievement.vue'
 import bank from '@/components/bank.vue'
@@ -19,8 +43,29 @@ import productCmp from '@/components/product-cmp.vue'
 import recommendation from '@/components/recommendation.vue'
 import regulasi from '@/components/regulasi.vue'
 import whyChooseUs from '@/components/why-choose-us.vue'
+import { FwbButton, FwbModal } from 'flowbite-vue'
 
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useDataStore } from '../stores/data'
 const dataStore = useDataStore()
+
+const isShowModal = ref(false)
+
+function closeModal() {
+  isShowModal.value = false
+  sessionStorage.setItem('isShowModal', true)
+}
+
+onMounted(() => {
+  let session = sessionStorage.getItem('isShowModal')
+  console.log('sess', session)
+  if (session == null) {
+    isShowModal.value = true
+    sessionStorage.setItem('isShowModal', false)
+  }
+
+  if (session == 'false') {
+    isShowModal.value = true
+  }
+})
 </script>

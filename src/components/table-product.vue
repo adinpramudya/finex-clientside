@@ -9,7 +9,6 @@
           <th scope="col" class="px-6 py-3 border-[1px] border-woodsmkoke">
             Margin Per Lot Remote
           </th>
-          <th scope="col" class="px-6 py-3 border-[1px] border-woodsmkoke">Margin Per Lot</th>
           <th scope="col" class="px-6 py-3 border-[1px] border-woodsmkoke">
             Commission Per Side Lot
           </th>
@@ -39,9 +38,7 @@
           <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.marginPerLotRemote ? formattedValue(data.marginPerLotRemote) : '-' }}
           </td>
-          <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
-            {{ data.marginPerLotNone ? formattedValue(data.marginPerLotNone) : '-' }}
-          </td>
+
           <td class="px-6 py-4 font-bold border-[1px] text-black border-woodsmkoke">
             {{ data.commissionPerSideLot ? formattedValue(data.commissionPerSideLot) : '-' }}
           </td>

@@ -61,13 +61,11 @@
           </p>
         </div>
       </div>
-      <div class="w-full col-span-12 lg:col-span-6">
-        <img
-          src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805218/Attachments/ne28px8q4idndkocorgm.png"
-          alt="login"
-          class="w-full lg:w-full lg:h-[500px] lg:ml-auto ml-0 lg:justify-center mt-12 mr-0"
-        />
-      </div>
+      <img
+        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1702805218/Attachments/ne28px8q4idndkocorgm.png"
+        alt="login"
+        class="w-[248px] lg:w-[554px] lg:ml-auto ml-0 lg:justify-center mt-12 col-span-12 mr-0 lg:mr-auto lg:col-span-6"
+      />
     </div>
   </div>
   <footerVue />
