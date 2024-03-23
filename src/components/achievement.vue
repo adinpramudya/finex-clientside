@@ -30,8 +30,9 @@
             Pialang dengan Volume Multilateral Terbanyak Tahun 2015
           </h1>
           <p class="text-base text-center mt-2 font-medium">
-            Finex meraih penghargaan sebagai "Best Broker Indonesia 2021", menjadikan Finex sebagai
-            broker yang paling tepat bagi Anda untuk melakukan perdagangan komoditi.
+            Atas komitmen yang tinggi untuk memajukan transaksi multilateral, Finex selalu
+            memberikan prestasi terbaiknya dalam pencapaian volume transaksi dan open interest di
+            Bursa Berjangka.
           </p>
         </div>
       </div>

@@ -222,7 +222,7 @@ import router from '../router'
 import { FwbToast } from 'flowbite-vue'
 import { auth } from '../firebaseConfig'
 import { updateProfile, onAuthStateChanged } from 'firebase/auth'
-const isSwipe = ref(false)
+const isSwipe = ref(window.innerWidth > 768)
 const isShowDropdown = ref(false)
 const menu = ref('dashboard')
 const userStore = useUserStore()
@@ -231,8 +231,12 @@ let isModal = ref(false)
 
 onMounted(() => {
   userStore.currentUser()
+  window.addEventListener('resize', handleResize)
 })
-
+const handleResize = () => {
+  // Perbarui nilai isSwipe berdasarkan lebar layar saat ini
+  isSwipe.value = window.innerWidth > 768
+}
 const toHome = () => {
   router.push('/')
 }

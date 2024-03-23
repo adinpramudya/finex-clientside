@@ -92,7 +92,7 @@
                 v-if="isShowDropdown"
                 class="w-full absolute top-10 right-0 bg-textPrimary border-[1px] shadow-xl border-slate-600"
               >
-                <p class="py-2 px-6 font-bold hover:bg-sunglow" @click="openDashboard">Buka Akun</p>
+                <p class="py-2 px-6 font-bold hover:bg-sunglow" @click="openDashboard">Dashboard</p>
                 <div
                   @click="userStore.logoutUser"
                   class="w-100 flex items-center py-2 px-6 hover:bg-sunglow my-3 lg:my-0 mb-4 lg:mb-0"
@@ -102,12 +102,7 @@
                 </div>
               </div>
             </div>
-            <!-- <router-link to="/login" class="lg:flex" v-else>
-              <div class="flex items-center lg:mr-[40px] my-3 lg:my-0 mb-4 lg:mb-0" @click="login">
-                <icons name="ic-login" width="20" height="20"></icons>
-                <span class="font-bold ml-1">Sign In</span>
-              </div>
-            </router-link> -->
+
             <router-link to="/login" class="lg:flex" v-else>
               <div
                 class="bg-[#edeff2] py-2 px-4 rounded-md lg:mr-[20px] my-3 lg:my-0 mb-4 lg:mb-0"

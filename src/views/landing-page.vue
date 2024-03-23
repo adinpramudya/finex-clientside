@@ -9,14 +9,17 @@
   <regulasi />
   <footerVue />
 
-  <fwb-modal size="5xl" v-if="isShowModal" class="!bg-black" @close="closeModal">
+  <fwb-modal persistent size="lg" v-if="isShowModal" class="!bg-black" @close="closeModal">
     <template #body>
-      <img src="../assets/images/modal.png" alt="modal" />
+      <img
+        src="https://res.cloudinary.com/dycicfqk1/image/upload/v1711121001/Attachments/qsnus5o9toli7dpoicbb.jpg"
+        alt="modal"
+      />
       <a href="https://finex.co.id/" target="_blank" @click="closeModal">
         <button
           class="p-2 rounded-tl-3xl bg-[#fff] absolute right-0 bottom-0 lg:text-sm text-xs font-bold"
         >
-          Lanjut ke website FINEX Komoditi
+          Lanjut ke website FINEX
         </button>
       </a>
       <!-- <div class="w-[944px] lg:h-[445px] md:h-[445px] h-[90px]"></div> -->
